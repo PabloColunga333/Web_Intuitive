@@ -134,7 +134,7 @@ export function ContactForm({
 
       const data = await response.json()
 
-      if (response.ok && data.ok) {
+      if (response.ok && (data.ok || data.success)) {
         setSuccess(true)
         toast({
           title: "¡Mensaje enviado con éxito!",
