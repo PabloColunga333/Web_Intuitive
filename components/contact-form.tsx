@@ -212,6 +212,7 @@ export function ContactForm({
           </label>
           <Input
             id="name"
+            name="name"
             value={formData.name}
             onChange={(e) => handleFieldChange("name", e.target.value)}
             onBlur={() => handleBlur("name")}
@@ -233,6 +234,7 @@ export function ContactForm({
           </label>
           <Input
             id="company"
+            name="company"
             value={formData.company}
             onChange={(e) => handleFieldChange("company", e.target.value)}
             onBlur={() => handleBlur("company")}
@@ -257,6 +259,7 @@ export function ContactForm({
           </label>
           <Input
             id="email"
+            name="email"
             type="email"
             value={formData.email}
             onChange={(e) => handleFieldChange("email", e.target.value)}
@@ -279,6 +282,7 @@ export function ContactForm({
           </label>
           <Input
             id="phone"
+            name="phone"
             type="tel"
             value={formData.phone}
             onChange={(e) => handleFieldChange("phone", e.target.value)}
@@ -302,6 +306,7 @@ export function ContactForm({
           Tipo de solicitud <span className="text-primary">*</span>
         </label>
         <Select
+          name="requestType"
           value={formData.requestType}
           onValueChange={(value) => {
             handleFieldChange("requestType", value)
@@ -337,6 +342,7 @@ export function ContactForm({
         </label>
         <Textarea
           id="message"
+          name="message"
           rows={4}
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
