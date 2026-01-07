@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Calendar, Clock } from "lucide-react"
-import Image from "next/image"
+
 
 const blogPosts = [
   {
@@ -224,11 +224,10 @@ export default function BlogPage() {
                     className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 flex flex-col"
                   >
                     <div className="relative h-44 sm:h-48 w-full overflow-hidden">
-                      <Image
+                      <img
                         src={post.image || "/placeholder.svg"}
                         alt={post.title}
-                        fill
-                        className="object-cover hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                         <span className="bg-primary text-primary-foreground px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium">
@@ -275,12 +274,11 @@ export default function BlogPage() {
             <ScrollArea className="h-full max-h-[90vh]">
               {selectedPost && (
                 <>
-                  <div className="relative h-48 sm:h-56 lg:h-64 w-full">
-                    <Image
+                  <div className="relative h-48 sm:h-56 lg:h-64 w-full overflow-hidden">
+                    <img
                       src={selectedPost.image || "/placeholder.svg"}
                       alt={selectedPost.title}
-                      fill
-                      className="object-cover"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6">
