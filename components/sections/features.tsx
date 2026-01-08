@@ -54,34 +54,31 @@ export function Features() {
               return (
                 <Card
                   key={feature.id}
-                  className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98]"
+                  className="p-5 sm:p-6 glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all cursor-pointer active:scale-[0.98] bg-gradient-to-br from-primary/5 to-accent/5"
                   onClick={() => setSelectedFeature(feature)}
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-primary/30 transition-colors">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                  </div>
-
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors text-center">
                     {feature.title}
                   </h3>
 
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-2 mb-4 text-center">
                     {bullets.map((bullet, idx) => (
-                      <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
-                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                      <li key={idx} className="text-xs sm:text-sm text-muted-foreground">
                         {bullet}
                       </li>
                     ))}
                   </ul>
 
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="p-0 h-auto text-sm text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
-                  >
-                    Ver detalle
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
+                  <div className="flex justify-center">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="p-0 h-auto text-sm text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
+                    >
+                      Ver detalle
+                      <ChevronRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </div>
                 </Card>
               )
             })}
