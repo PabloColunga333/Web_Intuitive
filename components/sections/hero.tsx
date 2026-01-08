@@ -51,34 +51,19 @@ export function Hero() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-up animation-delay-400">
-            <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-4 rounded-xl sm:rounded-2xl glass group hover:bg-secondary/30 transition-colors">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
-                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm sm:text-base mb-0.5">Implementación probada</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
-              </div>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Implementación probada</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-4 rounded-xl sm:rounded-2xl glass group hover:bg-secondary/30 transition-colors">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
-                <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm sm:text-base mb-0.5">Visibilidad total</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
-              </div>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Visibilidad total</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
             </div>
 
-            <div className="flex items-center gap-3 sm:gap-4 p-4 sm:p-4 rounded-xl sm:rounded-2xl glass group hover:bg-secondary/30 transition-colors sm:col-span-2 md:col-span-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm sm:text-base mb-0.5">Soporte certificado</h3>
-                <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
-              </div>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Soporte certificado</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
             </div>
           </div>
         </div>
