@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Card } from "@/components/ui/card"
 import { Target, Eye, Award } from "lucide-react"
+import Image from "next/image"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -31,22 +32,45 @@ export default function NosotrosPage() {
         {/* Quiénes somos */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card className="p-8 lg:p-12">
-                <h2 className="text-3xl font-bold mb-6">¿Quiénes somos?</h2>
-                <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-                  <p>
-                    Nos dedicamos a la venta, implementación y soporte técnico de sistemas de manufactura,
-                    especializados en las áreas de planeación, programación y control de la producción para empresas de
-                    cualquier sector de manufactura.
-                  </p>
-                  <p>
-                    Trabajamos con soluciones MOM de SIEMENS y ofrecemos servicios integrales que incluyen
-                    automatización industrial, Business Intelligence, Manufacturing Intelligence y consultoría en
-                    metodologías como Lean Manufacturing y Six Sigma.
-                  </p>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                {/* Contenido */}
+                <div>
+                  <Card className="p-8 lg:p-12 h-full">
+                    <h2 className="text-3xl font-bold mb-6">¿Quiénes somos?</h2>
+                    <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
+                      <p>
+                        Nos dedicamos a la venta, implementación y soporte técnico de sistemas de manufactura,
+                        especializados en las áreas de planeación, programación y control de la producción para empresas de
+                        cualquier sector de manufactura.
+                      </p>
+                      <p>
+                        Trabajamos con soluciones MOM de SIEMENS y ofrecemos servicios integrales que incluyen
+                        automatización industrial, Business Intelligence, Manufacturing Intelligence y consultoría en
+                        metodologías como Lean Manufacturing y Six Sigma.
+                      </p>
+                    </div>
+                  </Card>
                 </div>
-              </Card>
+
+                {/* Imagen */}
+                <div className="relative">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 mix-blend-overlay z-10" />
+                    <Image
+                      src="/intuitive-systems-hero.jpg"
+                      alt="Intuitive Systems México - Tecnología y manufactura"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
+                  </div>
+                  {/* Detalle decorativo */}
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-2xl -z-10 blur-2xl" />
+                  <div className="absolute -top-4 -left-4 w-32 h-32 bg-accent/10 rounded-2xl -z-10 blur-2xl" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
