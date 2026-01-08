@@ -1,5 +1,5 @@
 import { benefits } from "@/lib/site-data"
-import { CheckCircle2, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -49,20 +49,15 @@ export function AboutERP() {
               </Button>
             </div>
 
-            <Card className="p-6 sm:p-8 glass border-border/50">
-              <h3 className="text-lg sm:text-xl font-bold mb-5 sm:mb-6 flex items-center gap-2">
-                <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary/20 flex items-center justify-center">
-                  <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
-                </span>
+            <Card className="p-6 sm:p-8 lg:p-10 glass border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg shadow-primary/10">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-foreground">
                 ¿Por qué Intuitive ERP?
               </h3>
-              <ul className="space-y-3 sm:space-y-4">
+              <ul className="space-y-4 sm:space-y-5">
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3 group">
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-primary/30 transition-colors">
-                      <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary" />
-                    </div>
-                    <span className="text-sm sm:text-base text-foreground leading-relaxed">{benefit}</span>
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <span className="text-sm sm:text-base text-foreground leading-relaxed font-medium">{benefit}</span>
                   </li>
                 ))}
               </ul>
