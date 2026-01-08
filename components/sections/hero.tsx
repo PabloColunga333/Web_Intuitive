@@ -51,18 +51,18 @@ export function Hero() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-up animation-delay-400">
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5">
-              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Implementación probada</h3>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
             </div>
 
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5">
-              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Visibilidad total</h3>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
             </div>
 
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 group hover:border-primary/60 hover:shadow-xl hover:shadow-primary/15 transition-all text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
-              <h3 className="font-semibold text-sm sm:text-base mb-2 group-hover:text-primary transition-colors">Soporte certificado</h3>
+            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
+              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
             </div>
           </div>
