@@ -55,13 +55,12 @@ export default function NosotrosPage() {
 
                 {/* Imagen */}
                 <div className="relative">
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 mix-blend-overlay z-10" />
+                  <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
                     <Image
                       src="/intuitive-systems-hero.jpg"
                       alt="Intuitive Systems México - Tecnología y manufactura"
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       priority
                     />
