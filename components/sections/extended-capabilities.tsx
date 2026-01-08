@@ -54,14 +54,11 @@ export function ExtendedCapabilities() {
               const Icon = capabilityIcons[cap.id]
               return (
                 <TabsContent key={cap.id} value={cap.id}>
-                  <Card className="p-6 sm:p-8 lg:p-10 glass border-border/50">
-                    <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary" />
-                      </div>
+                  <Card className="p-6 sm:p-8 lg:p-12 glass border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg shadow-primary/10">
+                    <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                       <div className="flex-1">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{cap.title}</h3>
-                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-5 sm:mb-6">
+                        <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{cap.title}</h3>
+                        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 sm:mb-8">
                           {cap.description}
                         </p>
                         <Button asChild className="group w-full sm:w-auto h-11 sm:h-10">
@@ -70,6 +67,9 @@ export function ExtendedCapabilities() {
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                           </Link>
                         </Button>
+                      </div>
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl sm:rounded-3xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-primary" />
                       </div>
                     </div>
                   </Card>
