@@ -216,36 +216,6 @@ const blogPosts = [
       <p>Defina puntos críticos de captura, establezca nomenclaturas claras, capacite al personal y valide el sistema con simulacros de recall.</p>
     `,
   },
-  {
-    id: 7,
-    title: "Integración CAD con ERP",
-    excerpt: "Conecta tu diseño con la producción mediante integración CAD-ERP efectiva.",
-    image: "/cad-software-integration-with-erp-system-engineeri.jpg",
-    date: "15 de febrero, 2024",
-    readTime: "7 min",
-    category: "Tecnología",
-    content: `
-      <h2>Integración CAD-ERP</h2>
-      <p>La integración entre sistemas de diseño (CAD) y gestión empresarial (ERP) elimina la entrada manual de datos, reduce errores y acelera el proceso de ingeniería a producción.</p>
-      
-      <h3>Beneficios de la Integración</h3>
-      <p>Lista de materiales (BOM) automática, sincronización de revisiones, reducción de errores de transcripción y menor tiempo de lanzamiento de nuevos productos.</p>
-      
-      <h3>Sistemas CAD Soportados</h3>
-      <ul>
-        <li><strong>SolidWorks:</strong> Integración nativa bidireccional</li>
-        <li><strong>Autodesk Inventor:</strong> Exportación de estructura de producto</li>
-        <li><strong>Creo (Pro/Engineer):</strong> Sincronización de BOM</li>
-        <li><strong>Solid Edge:</strong> Transferencia de datos de diseño</li>
-      </ul>
-      
-      <h3>Proceso de Integración</h3>
-      <p>El sistema CAD genera la estructura del producto que se transfiere automáticamente al ERP. Los cambios de ingeniería se gestionan con control de revisiones y aprobaciones.</p>
-      
-      <h3>Mejores Prácticas</h3>
-      <p>Establezca nomenclaturas consistentes, defina flujos de aprobación claros, sincronice periódicamente y mantenga una fuente única de verdad para datos maestros.</p>
-    `,
-  },
 ]
 
 export default function BlogPage() {
@@ -277,7 +247,7 @@ export default function BlogPage() {
                     key={post.id}
                     className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 flex flex-col"
                   >
-                    <div className="relative h-44 sm:h-48 w-full overflow-hidden">
+                    <div className="relative h-32 sm:h-40 w-full overflow-hidden">
                       <img
                         src={post.image || "/placeholder.svg"}
                         alt={post.title}
