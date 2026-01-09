@@ -172,7 +172,10 @@ html {
 @layer utilities {
   @keyframes carousel-right {
     from {
-      transform: translateX(48px);
+      transform: translateX(72px) skewX(-1deg);
+    }
+    70% {
+      transform: translateX(-6px) skewX(0deg);
     }
     to {
       transform: translateX(0);
@@ -181,7 +184,10 @@ html {
 
   @keyframes carousel-left {
     from {
-      transform: translateX(-48px);
+      transform: translateX(-72px) skewX(1deg);
+    }
+    70% {
+      transform: translateX(6px) skewX(0deg);
     }
     to {
       transform: translateX(0);
@@ -189,12 +195,12 @@ html {
   }
 
   .animate-carousel-right {
-    animation: carousel-right 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: carousel-right 0.65s cubic-bezier(0.2, 0.8, 0.3, 1);
     will-change: transform;
   }
 
   .animate-carousel-left {
-    animation: carousel-left 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: carousel-left 0.65s cubic-bezier(0.2, 0.8, 0.3, 1);
     will-change: transform;
   }
 }
