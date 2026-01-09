@@ -99,6 +99,7 @@ export function Features() {
                 className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-in duration-600 ease-out fade-in-50 zoom-in-95 ${
                   direction === "right" ? "slide-in-from-right-4" : "slide-in-from-left-4"
                 }`}
+              >
                 {visibleFeatures.map((feature) => {
                   const Icon = iconMap[feature.icon]
                   const bullets = featureBullets[feature.id] || []
