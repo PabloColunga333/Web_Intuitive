@@ -6,7 +6,7 @@ import { features } from "@/lib/site-data"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
-import { Calendar, Cog, Factory, Package, TrendingUp, Users, FileText, ChevronRight } from "lucide-react"
+import { Calendar, Cog, Factory, Package, TrendingUp, Users, FileText, ChevronRight, ChevronLeft } from "lucide-react"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   calendar: Calendar,
@@ -30,6 +30,39 @@ const featureBullets: Record<string, string[]> = {
 
 export function Features() {
   const [selectedFeature, setSelectedFeature] = useState<(typeof features)[0] | null>(null)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % features.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + features.length) % features.length)
+  }
+
+  // Para móvil: 1 tarjeta, tablet: 2, desktop: 3
+  const getVisibleCards = () => {
+    if (typeof window === "undefined") return 3
+    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 1024) return 2
+    return 3
+  }
+
+  const [visibleCards, setVisibleCards] = useState(3)
+
+  React.useEffect(() => {
+    setVisibleCards(getVisibleCards())
+    const handleResize = () => setVisibleCards(getVisibleCards())
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
+  const visibleFeatures = features.slice(currentIndex, currentIndex + visibleCards)
+  const wrapAround = visibleFeatures.length < visibleCards
+  
+  if (wrapAround) {
+    visibleFeatures.push(...features.slice(0, visibleCards - visibleFeatures.length))
+  }
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 relative" id="caracteristicas">
@@ -46,45 +79,85 @@ export function Features() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {features.map((feature) => {
-              const Icon = iconMap[feature.icon]
-              const bullets = featureBullets[feature.id] || []
+          {/* Carrusel */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Botón Anterior */}
+            <button
+              onClick={prevSlide}
+              className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl glass border border-border/50 flex items-center justify-center hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all active:scale-95"
+              aria-label="Anterior"
+            >
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+            </button>
 
-              return (
-                <Card
-                  key={feature.id}
-                  className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98]"
-                  onClick={() => setSelectedFeature(feature)}
-                >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-primary/30 transition-colors">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                  </div>
+            {/* Tarjetas del Carrusel */}
+            <div className="flex-1 overflow-hidden">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {visibleFeatures.map((feature) => {
+                  const Icon = iconMap[feature.icon]
+                  const bullets = featureBullets[feature.id] || []
 
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
+                  return (
+                    <Card
+                      key={feature.id}
+                      className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98]"
+                      onClick={() => setSelectedFeature(feature)}
+                    >
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-primary/30 transition-colors">
+                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                      </div>
 
-                  <ul className="space-y-2 mb-4">
-                    {bullets.map((bullet, idx) => (
-                      <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
-                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
-                        {bullet}
-                      </li>
-                    ))}
-                  </ul>
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                        {feature.title}
+                      </h3>
 
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="p-0 h-auto text-sm text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
-                  >
-                    Ver detalle
-                    <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </Card>
-              )
-            })}
+                      <ul className="space-y-2 mb-4">
+                        {bullets.map((bullet, idx) => (
+                          <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
+                            <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="p-0 h-auto text-sm text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
+                      >
+                        Ver detalle
+                        <ChevronRight className="w-4 h-4 ml-1" />
+                      </Button>
+                    </Card>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Botón Siguiente */}
+            <button
+              onClick={nextSlide}
+              className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl glass border border-border/50 flex items-center justify-center hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all active:scale-95"
+              aria-label="Siguiente"
+            >
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+            </button>
+          </div>
+
+          {/* Indicadores de Posición */}
+          <div className="flex justify-center gap-2 mt-8">
+            {Array.from({ length: features.length }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-2 rounded-full transition-all ${
+                  idx >= currentIndex && idx < currentIndex + visibleCards
+                    ? "bg-primary w-8"
+                    : "bg-border/50 w-2 hover:bg-primary/50"
+                }`}
+                aria-label={`Ir a diapositiva ${idx + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
