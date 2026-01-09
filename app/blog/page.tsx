@@ -14,6 +14,60 @@ import { Calendar, Clock } from "lucide-react"
 const blogPosts = [
   {
     id: 1,
+    title: "Industria 4.0: Transformación Digital en Manufactura",
+    excerpt: "Cómo implementar tecnologías de Industria 4.0 para aumentar la competitividad y eficiencia operacional.",
+    image: "/software-manufacturing-dashboard-with-production-m.jpg",
+    date: "8 de enero, 2026",
+    readTime: "10 min",
+    category: "Transformación Digital",
+    content: `
+      <h2>La Revolución de la Industria 4.0</h2>
+      <p>La Industria 4.0 representa la cuarta revolución industrial, caracterizada por la integración de tecnologías digitales avanzadas en los procesos de manufactura. Esta transformación está redefiniendo cómo las empresas producen, mejoran y distribuyen sus productos.</p>
+      
+      <h3>Pilares Tecnológicos de la Industria 4.0</h3>
+      <p>La transformación digital en manufactura se sustenta en varias tecnologías clave que trabajan de manera integrada:</p>
+      <ul>
+        <li><strong>Internet de las Cosas (IoT):</strong> Sensores y dispositivos conectados que recopilan datos en tiempo real</li>
+        <li><strong>Big Data y Analytics:</strong> Análisis avanzado de grandes volúmenes de información operacional</li>
+        <li><strong>Inteligencia Artificial:</strong> Predicción de fallas, optimización y mantenimiento preventivo</li>
+        <li><strong>Cloud Computing:</strong> Acceso remoto y escalabilidad de sistemas empresariales</li>
+        <li><strong>Ciberseguridad:</strong> Protección de datos e infraestructura crítica</li>
+      </ul>
+      
+      <h3>Beneficios Tangibles para Manufactura</h3>
+      <p>Las empresas que implementan Industria 4.0 experimentan mejoras medibles en múltiples áreas:</p>
+      <ul>
+        <li>Reducción de 20-30% en tiempos de inactividad no planificados</li>
+        <li>Aumento de 15-25% en productividad general</li>
+        <li>Disminución de 10-20% en costos operativos</li>
+        <li>Mejora de 30-40% en calidad de producto</li>
+        <li>Optimización de 20-30% en consumo energético</li>
+      </ul>
+      
+      <h3>Hoja de Ruta para la Implementación</h3>
+      <p>La transformación digital exitosa requiere un enfoque estructurado:</p>
+      <ol>
+        <li><strong>Evaluación inicial:</strong> Diagnóstico de madurez digital y definición de objetivos</li>
+        <li><strong>Proyectos piloto:</strong> Implementación de casos de uso específicos con ROI claro</li>
+        <li><strong>Escalamiento:</strong> Expansión de soluciones exitosas a toda la operación</li>
+        <li><strong>Optimización continua:</strong> Mejora iterativa basada en datos y aprendizajes</li>
+      </ol>
+      
+      <h3>Desafíos Comunes y Soluciones</h3>
+      <p>Las organizaciones enfrentan obstáculos típicos que pueden mitigarse con estrategias apropiadas:</p>
+      <ul>
+        <li><strong>Resistencia al cambio:</strong> Comunicación clara de beneficios y capacitación continua</li>
+        <li><strong>Integración de sistemas legacy:</strong> Arquitecturas abiertas y APIs estándar</li>
+        <li><strong>Inversión inicial:</strong> Enfoque por fases con retornos rápidos</li>
+        <li><strong>Brecha de habilidades:</strong> Programas de desarrollo de talento y alianzas estratégicas</li>
+      </ul>
+      
+      <h3>El Futuro de la Manufactura Inteligente</h3>
+      <p>La evolución continúa con tecnologías emergentes como gemelos digitales, manufactura aditiva avanzada, robots colaborativos y sistemas autónomos. Las empresas que adopten estas tecnologías hoy estarán mejor posicionadas para competir en el mercado global del mañana.</p>
+    `,
+  },
+  {
+    id: 2,
     title: "Software de Manufactura: Guía Completa",
     excerpt: "Descubre cómo el software de manufactura puede transformar tu operación y optimizar procesos.",
     image: "/software-manufacturing-dashboard-with-production-m.jpg",
@@ -43,7 +97,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 2,
+    id: 3,
     title: "Optimización de la Planeación de Producción",
     excerpt: "Estrategias y herramientas para mejorar la planeación y programación de tu manufactura.",
     image: "/production-planning-gantt-chart-with-scheduling.jpg",
@@ -73,7 +127,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 3,
+    id: 4,
     title: "ERP vs MRP: ¿Cuál necesita tu empresa?",
     excerpt: "Conoce las diferencias entre ERP y MRP y cuál es la mejor opción para tu operación.",
     image: "/erp-mrp-comparison-business-systems-integration.jpg",
@@ -103,7 +157,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 4,
+    id: 5,
     title: "Gestión de Calidad en la Manufactura",
     excerpt: "Implementa sistemas de calidad efectivos con herramientas digitales y cumplimiento normativo.",
     image: "/quality-control-manufacturing-inspection-digital-t.jpg",
@@ -134,7 +188,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 5,
+    id: 6,
     title: "Trazabilidad en la Industria",
     excerpt: "La importancia de la trazabilidad completa desde materia prima hasta producto terminado.",
     image: "/supply-chain-traceability-barcode-tracking-system.jpg",
@@ -163,7 +217,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 6,
+    id: 7,
     title: "Integración CAD con ERP",
     excerpt: "Conecta tu diseño con la producción mediante integración CAD-ERP efectiva.",
     image: "/cad-software-integration-with-erp-system-engineeri.jpg",
