@@ -172,7 +172,7 @@ html {
 @layer utilities {
   @keyframes carousel-right {
     from {
-      transform: translateX(16px);
+      transform: translateX(48px);
     }
     to {
       transform: translateX(0);
@@ -181,7 +181,7 @@ html {
 
   @keyframes carousel-left {
     from {
-      transform: translateX(-16px);
+      transform: translateX(-48px);
     }
     to {
       transform: translateX(0);
@@ -189,10 +189,12 @@ html {
   }
 
   .animate-carousel-right {
-    animation: carousel-right 0.45s ease-out;
+    animation: carousel-right 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
   }
 
   .animate-carousel-left {
-    animation: carousel-left 0.45s ease-out;
+    animation: carousel-left 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
   }
 }
