@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { features } from "@/lib/site-data"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -50,7 +49,7 @@ export function Features() {
 
   const [visibleCards, setVisibleCards] = useState(3)
 
-  React.useEffect(() => {
+  useEffect(() => {
     setVisibleCards(getVisibleCards())
     const handleResize = () => setVisibleCards(getVisibleCards())
     window.addEventListener("resize", handleResize)
