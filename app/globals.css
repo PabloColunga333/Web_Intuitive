@@ -167,3 +167,36 @@ html {
 .animation-delay-400 {
   animation-delay: 400ms;
 }
+
+/* Animaciones para el carrusel de características */
+@layer utilities {
+  @keyframes carousel-right {
+    from {
+      opacity: 0;
+      transform: translateX(16px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  @keyframes carousel-left {
+    from {
+      opacity: 0;
+      transform: translateX(-16px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .animate-carousel-right {
+    animation: carousel-right 0.45s ease-out;
+  }
+
+  .animate-carousel-left {
+    animation: carousel-left 0.45s ease-out;
+  }
+}

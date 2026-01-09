@@ -96,8 +96,8 @@ export function Features() {
             <div className="flex-1 overflow-hidden">
               <div
                 key={`${currentIndex}-${visibleCards}-${direction}`}
-                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-in duration-600 ease-out fade-in-50 zoom-in-95 ${
-                  direction === "right" ? "slide-in-from-right-4" : "slide-in-from-left-4"
+                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 ${
+                  direction === "right" ? "animate-carousel-right" : "animate-carousel-left"
                 }`}
               >
                 {visibleFeatures.map((feature) => {
