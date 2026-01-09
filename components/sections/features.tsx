@@ -30,12 +30,15 @@ const featureBullets: Record<string, string[]> = {
 export function Features() {
   const [selectedFeature, setSelectedFeature] = useState<(typeof features)[0] | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [direction, setDirection] = useState<"left" | "right">("right")
 
   const nextSlide = () => {
+    setDirection("right")
     setCurrentIndex((prev) => (prev + 1) % features.length)
   }
 
   const prevSlide = () => {
+    setDirection("left")
     setCurrentIndex((prev) => (prev - 1 + features.length) % features.length)
   }
 
@@ -91,7 +94,11 @@ export function Features() {
 
             {/* Tarjetas del Carrusel */}
             <div className="flex-1 overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              <div
+                key={`${currentIndex}-${visibleCards}-${direction}`}
+                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-in duration-500 ease-out ${
+                  direction === "right" ? "slide-in-from-right-4" : "slide-in-from-left-4"
+                }`}
                 {visibleFeatures.map((feature) => {
                   const Icon = iconMap[feature.icon]
                   const bullets = featureBullets[feature.id] || []
@@ -148,7 +155,10 @@ export function Features() {
             {Array.from({ length: features.length }).map((_, idx) => (
               <button
                 key={idx}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={() => {
+                  setDirection(idx > currentIndex ? "right" : "left")
+                  setCurrentIndex(idx)
+                }}
                 className={`h-2 rounded-full transition-all ${
                   idx >= currentIndex && idx < currentIndex + visibleCards
                     ? "bg-primary w-8"
