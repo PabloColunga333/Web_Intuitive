@@ -133,9 +133,18 @@ export function Footer() {
             <p className="text-xs sm:text-sm text-muted-foreground">
               © {currentYear} {siteConfig.name}. Todos los derechos reservados.
             </p>
-            <p className="text-[10px] sm:text-xs text-muted-foreground text-center md:text-right max-w-md">
-              Otros nombres mencionados son marcas registradas de sus respectivos propietarios.
-            </p>
+            <div className="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs">
+              <Link 
+                href="/privacidad"
+                className="text-muted-foreground hover:text-foreground transition-colors underline underline-offset-2"
+              >
+                Aviso de Privacidad
+              </Link>
+              <span className="text-border/50">|</span>
+              <p className="text-muted-foreground max-w-md">
+                Otros nombres mencionados son marcas registradas de sus respectivos propietarios.
+              </p>
+            </div>
           </div>
         </div>
       </div>

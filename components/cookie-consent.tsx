@@ -53,10 +53,10 @@ export function CookieConsent() {
                 analizar el tráfico y personalizar el contenido. Al hacer clic en "Aceptar", 
                 consientes el uso de todas las cookies.{" "}
                 <a 
-                  href="/politica-privacidad" 
+                  href="/privacidad" 
                   className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
                 >
-                  Política de Privacidad
+                  Aviso de Privacidad
                 </a>
               </p>
             </div>
