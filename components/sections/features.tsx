@@ -18,7 +18,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 const featureBullets: Record<string, string[]> = {
-  planificacion: ["CTP dinámico", "MRP y capacidad", "Trazabilidad gráfica"],
+  planificacion: ["CTP dinámico", "MRP en tiempo real", "Trazabilidad gráfica", "Análisis de capacidad"],
   ingenieria: ["BOM visual", "Control de revisiones", "CADLink integrado"],
   manufactura: ["Órdenes en tiempo real", "Shop Floor Manager", "Escaneo móvil"],
   inventario: ["Niveles multi-ubicación", "Recuentos cíclicos", "Trazabilidad serie"],

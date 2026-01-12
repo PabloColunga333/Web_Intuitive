@@ -41,7 +41,7 @@ export const features = [
     id: "planificacion",
     title: "Planificación y programación dinámicas",
     icon: "calendar",
-    description: "CTP dinámico, MRP, capacidad y materiales, trazabilidad gráfica para optimizar la producción.",
+    description: "Con Intuitive ERP, puede verificar la disponibilidad y confirmar pedidos con confianza utilizando CTP dinámico (capable-to-promise planning). Analice los requisitos de material con una herramienta de trazabilidad gráfica y aproveche la MRP (material requirements planning) para planificar materiales al instante. Busque automáticamente problemas de capacidad y de material, identifique problemas de programación y obtenga soluciones rápidamente para cumplir con sus fechas de entrega.",
   },
   {
     id: "ingenieria",
@@ -79,7 +79,7 @@ export const features = [
   },
   {
     id: "cotizaciones",
-    title: "Cotizaciones y pedidos",
+    title: "Procesamiento de cotizaciones y pedidos",
     icon: "file-text",
     description:
       "Configurar ítems/BOM/rutas en el módulo de cotización. Convertir cotizaciones a órdenes, aprobación jerárquica, matrices de precios.",
@@ -91,7 +91,7 @@ export const extendedCapabilities = [
     id: "gerente-planta",
     title: "Gerente de planta",
     description:
-      "Visibilidad para supervisores con panel táctil. Seguimiento de mano de obra e inventario en tiempo real.",
+      "Puede realizar un seguimiento de las transacciones de mano de obra y de inventario en el taller en tiempo real. La herramienta proporciona a los supervisores una visibilidad rápida de las prioridades de producción, el estado de los pedidos, las cargas del centro de trabajo y la utilización de los empleados. Para los operadores del centro de trabajo, Shop Floor Manager proporciona un panel táctil intuitivo que les permite registrar la entrada y salida de las órdenes de trabajo e informar la finalización de la orden de trabajo y los movimientos de materiales desde un dispositivo móvil.",
   },
   {
     id: "recopilacion-datos",
