@@ -48,41 +48,41 @@ export const features = [
     title: "Gestión de ingeniería",
     icon: "cog",
     description:
-      "Soporte avanzado para la configuración del producto, gestión de la calidad, cambios de ingeniería y trazabilidad del número de serie de los componentes. BOM visual, control de revisiones y fechas de cambios. CADLink integrado con SolidWorks, Autodesk Inventor, Creo, Solid Edge y más aplicaciones de diseño profesional.",
+      "Gestión avanzada para configuración del producto, cambios de ingeniería y trazabilidad del número de serie de los componentes. BOM visual, control de revisiones y fechas con CADLink integrado para SolidWorks, Autodesk Inventor, Creo y Solid Edge.",
   },
   {
     id: "manufactura",
     title: "Administración de manufactura",
     icon: "factory",
     description:
-      "Órdenes de trabajo en tiempo real con visibilidad completa del piso de fabricación. Shop Floor Manager proporciona a los operadores un panel táctil intuitivo para registrar entrada y salida de órdenes, reportar finalización de trabajos y movimientos de materiales desde dispositivos móviles. Escaneo de códigos de barras y control en tiempo real.",
+      "Órdenes de trabajo en tiempo real. Shop Floor Manager proporciona a los operadores un panel táctil intuitivo para registrar entrada y salida de órdenes, reportar finalización y movimientos de materiales desde dispositivos móviles con escaneo de códigos de barras.",
   },
   {
     id: "inventario",
     title: "Gestión del inventario",
     icon: "package",
     description:
-      "Gestione los niveles de inventario por artículo, ubicación y familia de productos. Recuentos cíclicos automatizados, trazabilidad completa con números de serie multinivel, visibilidad multi-ubicación y control de materiales en tiempo real para optimizar rotación de inventarios y reducir costos logísticos.",
+      "Gestione niveles de inventario por artículo, ubicación y familia de productos. Recuentos cíclicos, trazabilidad completa con números de serie multinivel y visibilidad multi-ubicación para optimizar rotación de inventarios y reducir costos logísticos.",
   },
   {
     id: "prevision",
     title: "Previsión de la demanda",
     icon: "trending-up",
-    description: "Pronósticos automáticos inteligentes con selección de técnica de pronóstico, modelos avanzados y diagnósticos para mejorar la precisión. Permita que el sistema analice tendencias y patrones históricos para optimizar la planeación de producción y evitar exceso o falta de inventario.",
+    description: "Pronósticos automáticos con selección inteligente de técnica, modelos avanzados y diagnósticos. Mejore la precisión de planeación analizando tendencias y patrones históricos para optimizar producción evitando exceso o falta de inventario.",
   },
   {
     id: "crm",
     title: "CRM",
     icon: "users",
     description:
-      "Gestión integral de oportunidades de venta, campañas de marketing e incidentes de soporte técnico. Totalmente alineado con finanzas y pedidos, incluye gestión de contratos y garantías. Mejore la satisfacción del cliente con seguimiento completo desde la oportunidad hasta la venta y soporte.",
+      "Gestión integral de oportunidades, campañas e incidentes de soporte. Totalmente alineado con finanzas y pedidos, incluye gestión de contratos y garantías para mejorar la satisfacción del cliente.",
   },
   {
     id: "cotizaciones",
     title: "Procesamiento de cotizaciones y pedidos",
     icon: "file-text",
     description:
-      "Configure ítems, BOM y rutas de fabricación directamente en el módulo de cotización. Convierta cotizaciones a órdenes de compra con aprobación jerárquica, matrices de precios personalizadas y un flujo completo de cotización a efectivo que integra datos críticos en toda su empresa.",
+      "Configure ítems, BOM y rutas de fabricación en el módulo de cotización. Convierta cotizaciones a órdenes con aprobación jerárquica y matrices de precios personalizadas en un flujo completo de cotización a efectivo.",
   },
 ]
 
@@ -97,28 +97,28 @@ export const extendedCapabilities = [
     id: "recopilacion-datos",
     title: "Recopilación de datos de planta",
     description:
-      "Recopile datos en tiempo real desde el piso de fabricación utilizando lectores de código de barras, teléfonos móviles, tablets y dispositivos RF. Automatice la captura de transacciones de mano de obra, movimientos de inventario y estado de órdenes. Reduce significativamente errores de recepción, movimientos y reportes, mejorando la precisión de datos y visibilidad en toda la operación.",
+      "Capture datos en tiempo real desde el piso de fabricación utilizando lectores de código de barras, teléfonos, tablets y dispositivos RF. Automatice la recopilación de transacciones de mano de obra, movimientos de inventario y estado de órdenes para reducir errores y mejorar la precisión de datos.",
   },
   {
     id: "unipoint",
     title: "Calidad avanzada por uniPoint",
     description:
-      "Gestión integral de no conformidades, acciones correctivas (CAPA), materiales peligrosos (HazMat) y mantenimiento para cumplimiento normativo. Soporta ISO 9001, ISO 13485, ISO/TS 16949, AS9100, FDA 21 CFR Part 11 y 820 para asegurar la máxima calidad y cumplimiento regulatorio.",
+      "Gestión integral de no conformidades, acciones correctivas (CAPA), materiales peligrosos (HazMat) y mantenimiento. Soporta ISO 9001, ISO 13485, ISO/TS 16949, AS9100, FDA 21 CFR Part 11 y 820 para cumplimiento normativo de máxima calidad.",
   },
   {
     id: "analytics",
     title: "Intuitive Analytics",
-    description: "Dashboards interactivos prediseñados para visualizar KPIs críticos, informes dinámicos y análisis multidimensional de datos. Acceda a información en tiempo real sobre producción, inventario, ventas y finanzas para tomar decisiones estratégicas y tácticas informadas que maximicen la eficiencia operativa.",
+    description: "Dashboards interactivos prediseñados e informes dinámicos para análisis multidimensional de datos. Acceda a información en tiempo real sobre producción, inventario, ventas y finanzas para tomar decisiones estratégicas y tácticas informadas.",
   },
   {
     id: "emf",
     title: "Marco de gestión de eventos (EMF)",
-    description: "Configure alertas inteligentes y automatización de procesos con notificaciones y mensajes completamente configurables. Ejecute acciones automáticas basadas en eventos empresariales como cambios de estado de órdenes, niveles de inventario críticos o excepciones de producción para mejorar la agilidad operativa.",
+    description: "Configure alertas inteligentes y automatización de procesos con notificaciones y mensajes completamente configurables. Ejecute acciones automáticas basadas en eventos empresariales para mejorar la agilidad operativa.",
   },
   {
     id: "webapi",
     title: "Intuitive Web API",
-    description: "Proporciona acceso seguro a la lógica de negocio de Intuitive ERP para integración con sistemas externos, desarrollo de aplicaciones personalizadas y generación de reportes avanzados. Control granular de exposición de datos y gestión de usuarios para integración segura con su ecosistema tecnológico.",
+    description: "Proporciona acceso seguro a la lógica de negocio para integración con sistemas externos, desarrollo de aplicaciones personalizadas y generación de reportes avanzados con control de exposición de datos y usuarios.",
   },
 ]
 
