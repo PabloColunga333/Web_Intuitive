@@ -48,41 +48,41 @@ export const features = [
     title: "Gestión de ingeniería",
     icon: "cog",
     description:
-      "BOM visual, control de revisiones y fechas. CADLink con SolidWorks, Autodesk Inventor, Creo, Solid Edge y más.",
+      "Soporte avanzado para la configuración del producto, gestión de la calidad, cambios de ingeniería y trazabilidad del número de serie de los componentes. BOM visual, control de revisiones y fechas de cambios. CADLink integrado con SolidWorks, Autodesk Inventor, Creo, Solid Edge y más aplicaciones de diseño profesional.",
   },
   {
     id: "manufactura",
     title: "Administración de manufactura",
     icon: "factory",
     description:
-      "Órdenes de trabajo en tiempo real, SFDC, Shop Floor Manager, escaneo móvil y códigos de barras, pantallas táctiles.",
+      "Órdenes de trabajo en tiempo real con visibilidad completa del piso de fabricación. Shop Floor Manager proporciona a los operadores un panel táctil intuitivo para registrar entrada y salida de órdenes, reportar finalización de trabajos y movimientos de materiales desde dispositivos móviles. Escaneo de códigos de barras y control en tiempo real.",
   },
   {
     id: "inventario",
     title: "Gestión del inventario",
     icon: "package",
     description:
-      "Niveles por artículo/ubicación/familia, recuentos cíclicos, trazabilidad completa con números de serie multinivel.",
+      "Gestione los niveles de inventario por artículo, ubicación y familia de productos. Recuentos cíclicos automatizados, trazabilidad completa con números de serie multinivel, visibilidad multi-ubicación y control de materiales en tiempo real para optimizar rotación de inventarios y reducir costos logísticos.",
   },
   {
     id: "prevision",
     title: "Previsión de la demanda",
     icon: "trending-up",
-    description: "Pronósticos automáticos, selección de técnica, modelos y diagnósticos avanzados.",
+    description: "Pronósticos automáticos inteligentes con selección de técnica de pronóstico, modelos avanzados y diagnósticos para mejorar la precisión. Permita que el sistema analice tendencias y patrones históricos para optimizar la planeación de producción y evitar exceso o falta de inventario.",
   },
   {
     id: "crm",
     title: "CRM",
     icon: "users",
     description:
-      "Oportunidades, campañas, incidentes de soporte. Alineado con finanzas y pedidos, contratos y garantías.",
+      "Gestión integral de oportunidades de venta, campañas de marketing e incidentes de soporte técnico. Totalmente alineado con finanzas y pedidos, incluye gestión de contratos y garantías. Mejore la satisfacción del cliente con seguimiento completo desde la oportunidad hasta la venta y soporte.",
   },
   {
     id: "cotizaciones",
     title: "Procesamiento de cotizaciones y pedidos",
     icon: "file-text",
     description:
-      "Configurar ítems/BOM/rutas en el módulo de cotización. Convertir cotizaciones a órdenes, aprobación jerárquica, matrices de precios.",
+      "Configure ítems, BOM y rutas de fabricación directamente en el módulo de cotización. Convierta cotizaciones a órdenes de compra con aprobación jerárquica, matrices de precios personalizadas y un flujo completo de cotización a efectivo que integra datos críticos en toda su empresa.",
   },
 ]
 
@@ -97,28 +97,28 @@ export const extendedCapabilities = [
     id: "recopilacion-datos",
     title: "Recopilación de datos de planta",
     description:
-      "Lectores de código de barras, teléfonos, tablets y RF. Reduce errores de recepción y mejora precisión.",
+      "Recopile datos en tiempo real desde el piso de fabricación utilizando lectores de código de barras, teléfonos móviles, tablets y dispositivos RF. Automatice la captura de transacciones de mano de obra, movimientos de inventario y estado de órdenes. Reduce significativamente errores de recepción, movimientos y reportes, mejorando la precisión de datos y visibilidad en toda la operación.",
   },
   {
     id: "unipoint",
     title: "Calidad avanzada por uniPoint",
     description:
-      "No conformidades, CAPA, HazMat, mantenimiento para cumplimiento. ISO 9001, ISO 13485, ISO/TS 16949, AS9100, FDA 21 CFR Part 11 y 820.",
+      "Gestión integral de no conformidades, acciones correctivas (CAPA), materiales peligrosos (HazMat) y mantenimiento para cumplimiento normativo. Soporta ISO 9001, ISO 13485, ISO/TS 16949, AS9100, FDA 21 CFR Part 11 y 820 para asegurar la máxima calidad y cumplimiento regulatorio.",
   },
   {
     id: "analytics",
     title: "Intuitive Analytics",
-    description: "Dashboards interactivos prediseñados, informes dinámicos y análisis multidimensional.",
+    description: "Dashboards interactivos prediseñados para visualizar KPIs críticos, informes dinámicos y análisis multidimensional de datos. Acceda a información en tiempo real sobre producción, inventario, ventas y finanzas para tomar decisiones estratégicas y tácticas informadas que maximicen la eficiencia operativa.",
   },
   {
     id: "emf",
     title: "Marco de gestión de eventos (EMF)",
-    description: "Alertas y automatización, notificaciones y mensajes configurables.",
+    description: "Configure alertas inteligentes y automatización de procesos con notificaciones y mensajes completamente configurables. Ejecute acciones automáticas basadas en eventos empresariales como cambios de estado de órdenes, niveles de inventario críticos o excepciones de producción para mejorar la agilidad operativa.",
   },
   {
     id: "webapi",
     title: "Intuitive Web API",
-    description: "Acceso a lógica de negocio, integración y reporteo. Control de exposición y usuarios.",
+    description: "Proporciona acceso seguro a la lógica de negocio de Intuitive ERP para integración con sistemas externos, desarrollo de aplicaciones personalizadas y generación de reportes avanzados. Control granular de exposición de datos y gestión de usuarios para integración segura con su ecosistema tecnológico.",
   },
 ]
 
