@@ -48,41 +48,41 @@ export const features = [
     title: "Gestión de ingeniería",
     icon: "cog",
     description:
-      "Gestión avanzada para configuración del producto, cambios de ingeniería y trazabilidad del número de serie de los componentes. BOM visual, control de revisiones y fechas con CADLink integrado para SolidWorks, Autodesk Inventor, Creo y Solid Edge.",
+      "Controle los costes de producción y gestione los recursos de forma más eficiente con las herramientas de gestión de ingeniería flexibles de Intuitive. Cree múltiples listas de materiales visuales (BOM) para cada artículo, manteniendo una revisión completa y un control de fecha efectivo para rastrear y controlar los cambios de ingeniería. Aproveche el módulo CADLink para integrar datos de elementos maestros y listas de materiales con aplicaciones CAD populares como SolidWorks, Autodesk Inventor, Creo, Solid Edge y más. Intuitive también le permite generar y mantener rutas flexibles con múltiples versiones de rutas por número de pieza.",
   },
   {
     id: "manufactura",
     title: "Administración de manufactura",
     icon: "factory",
     description:
-      "Órdenes de trabajo en tiempo real. Shop Floor Manager proporciona a los operadores un panel táctil intuitivo para registrar entrada y salida de órdenes, reportar finalización y movimientos de materiales desde dispositivos móviles con escaneo de códigos de barras.",
+      "Intuitive le permite rastrear y monitorear órdenes de trabajo, estado de producción y capacidad de material y equipo en tiempo real. Con la herramienta Shop Floor Data Collection (SFDC), puede utilizar lectores móviles de códigos de barras para realizar un seguimiento eficiente de los problemas de materiales, recibos de órdenes de trabajo, movimientos de inventario y transacciones laborales a medida que ocurren en el taller. El módulo Shop Floor Manager permite a los supervisores controlar las prioridades de producción, el estado de los pedidos, las cargas del centro de trabajo y la utilización de los empleados de un vistazo. Los operadores pueden usar pantallas táctiles para registrar la entrada y salida de las órdenes de trabajo y para informar la finalización de la orden de trabajo y los movimientos de materiales.",
   },
   {
     id: "inventario",
     title: "Gestión del inventario",
     icon: "package",
     description:
-      "Gestione niveles de inventario por artículo, ubicación y familia de productos. Recuentos cíclicos, trazabilidad completa con números de serie multinivel y visibilidad multi-ubicación para optimizar rotación de inventarios y reducir costos logísticos.",
+      "Intuitive proporciona las herramientas que necesita para controlar con precisión las transacciones de inventario, los costos de los productos y el uso de materiales. Le brinda acceso instantáneo a datos en tiempo real para que pueda rastrear los niveles de inventario por artículo, ubicación, familia de productos y uso histórico, todo con el clic de un botón. También puede realizar recuentos cíclicos, inventarios físicos y análisis de información de costos. El seguimiento completo de la cuna a la tumba de los números de serie de varios niveles ayuda al cumplimiento de las normas de trazabilidad.",
   },
   {
     id: "prevision",
     title: "Previsión de la demanda",
     icon: "trending-up",
-    description: "Pronósticos automáticos con selección inteligente de técnica, modelos avanzados y diagnósticos. Mejore la precisión de planeación analizando tendencias y patrones históricos para optimizar producción evitando exceso o falta de inventario.",
+    description: "Genere pronósticos más precisos con el clic de un mouse, sin necesidad de conocimientos de estadísticas o pronósticos. Intuitive puede calcular pronósticos automáticamente analizando sus datos de uso y seleccionando la técnica de pronóstico óptima entre una variedad de métodos. Si prefiere dictar su propio enfoque, Intuitive ofrece una selección completa de modelos de pronóstico y todas las ayudas de diagnóstico que necesita para crear pronósticos usted mismo.",
   },
   {
     id: "crm",
     title: "CRM",
     icon: "users",
     description:
-      "Gestión integral de oportunidades, campañas e incidentes de soporte. Totalmente alineado con finanzas y pedidos, incluye gestión de contratos y garantías para mejorar la satisfacción del cliente.",
+      "Con el CRM integrado de Intuitive, puede gestionar los datos de los clientes, las oportunidades, las campañas de marketing y los incidentes de soporte en una única plataforma, al tiempo que garantiza la alineación con los datos financieros y de procesamiento de pedidos de su ERP. Administre fácilmente la información de contactos y cuentas, vea datos de estado actuales e históricos y vincule citas, documentos, correos electrónicos y actividades a clientes u oportunidades específicos. Cree registros detallados de cada incidente de soporte, calcule los costos asociados con la resolución de incidentes, realice un seguimiento de las garantías y administre los contratos de servicio.",
   },
   {
     id: "cotizaciones",
     title: "Procesamiento de cotizaciones y pedidos",
     icon: "file-text",
     description:
-      "Configure ítems, BOM y rutas de fabricación en el módulo de cotización. Convierta cotizaciones a órdenes con aprobación jerárquica y matrices de precios personalizadas en un flujo completo de cotización a efectivo.",
+      "Maximice la eficiencia de su fuerza de ventas con las funciones de procesamiento de pedidos y cotizaciones fáciles de usar de Intuitive. Dentro del módulo de cotización del sistema, puede configurar nuevos elementos, listas de materiales y rutas sobre la marcha; aplicar descuentos por volumen o específicos para el cliente; y generar Solicitudes de cotización (RFQ) de proveedores para cualquier línea de una cotización. Convierta automáticamente cotizaciones en órdenes de venta y mantenga fácilmente órdenes de venta de todos los niveles de complejidad con un sistema electrónico de aprobación jerárquica. Incluso puede procesar compras en el punto de venta y mantener matrices de precios desde dentro del sistema.",
   },
 ]
 
@@ -97,28 +97,28 @@ export const extendedCapabilities = [
     id: "recopilacion-datos",
     title: "Recopilación de datos de planta",
     description:
-      "Capture datos en tiempo real desde el piso de fabricación utilizando lectores de código de barras, teléfonos, tablets y dispositivos RF. Automatice la recopilación de transacciones de mano de obra, movimientos de inventario y estado de órdenes para reducir errores y mejorar la precisión de datos.",
+      "Los operadores pueden usar lectores de códigos de barras móviles para capturar de manera eficiente una amplia gama de datos, incluidos problemas de materiales, recibos de órdenes de trabajo, movimientos de inventario y transacciones laborales, en el taller en tiempo real. Disponible en teléfonos inteligentes, tabletas, unidades cableadas y dispositivos portátiles de RF, SFDC permite a los empleados ingresar datos de forma remota en cualquier lugar y ayuda a reducir los errores de recepción al permitir que el material entrante se escanee en Intuitive inmediatamente después de su llegada.",
   },
   {
     id: "unipoint",
     title: "Calidad avanzada por uniPoint",
     description:
-      "Gestión integral de no conformidades, acciones correctivas (CAPA), materiales peligrosos (HazMat) y mantenimiento. Soporta ISO 9001, ISO 13485, ISO/TS 16949, AS9100, FDA 21 CFR Part 11 y 820 para cumplimiento normativo de máxima calidad.",
+      "Permite a los fabricantes de industrias reguladas rastrear y medir tanto el costo como la frecuencia de los eventos de calidad. Le ayuda a iniciar fácilmente no conformidades y acciones preventivas correctivas, así como a gestionar la documentación de HazMat. La solución también admite la gestión del mantenimiento para el cumplimiento de la norma ISO, incluidas las normas ISO 9001, ISO 13485, ISO / TS 16949, AS9100 y FDA 21 CFR Parte 11 y Parte 820.",
   },
   {
     id: "analytics",
     title: "Intuitive Analytics",
-    description: "Dashboards interactivos prediseñados e informes dinámicos para análisis multidimensional de datos. Acceda a información en tiempo real sobre producción, inventario, ventas y finanzas para tomar decisiones estratégicas y tácticas informadas.",
+    description: "Puede identificar fácilmente y compartir conocimientos comerciales con las partes interesadas relevantes para acelerar las decisiones y acciones comerciales. Aprovechando el rápido análisis multidimensional y multifuncional, Intuitive Analytics presenta inteligencia en paneles interactivos prediseñados e informes dinámicos que brindan información sobre sus operaciones y le permiten profundizar para examinar las causas raíz.",
   },
   {
     id: "emf",
     title: "Marco de gestión de eventos (EMF)",
-    description: "Configure alertas inteligentes y automatización de procesos con notificaciones y mensajes completamente configurables. Ejecute acciones automáticas basadas en eventos empresariales para mejorar la agilidad operativa.",
+    description: "Es una solución de alerta integral que se puede utilizar para automatizar una amplia gama de tareas. Use EMF para monitorear varios procesos, notificar a los miembros del personal sobre inquietudes, responder a excepciones, responder consultas y automatizar la comunicación con empleados, clientes y proveedores. EMF puede predecir y reaccionar ante eventos en Intuitive ERP y luego entregar información crítica a las partes interesadas y departamentos relevantes a través de notificaciones, mensajes de texto o correos electrónicos automatizados. Fácilmente integrado con Intuitive, EMF es una ventanilla única para todos sus requisitos de alerta.",
   },
   {
     id: "webapi",
     title: "Intuitive Web API",
-    description: "Proporciona acceso seguro a la lógica de negocio para integración con sistemas externos, desarrollo de aplicaciones personalizadas y generación de reportes avanzados con control de exposición de datos y usuarios.",
+    description: "Proporciona a su organización acceso completo a la lógica empresarial de Intuitive, lo que le permite manipular, actualizar y compartir información desde fuera de la interfaz de Intuitive. Aproveche la API para crear soluciones de informes personalizadas, integre Intuitive con otros sistemas empresariales y más, todo mientras se adhiere a las reglas comerciales y la configuración de control maestro de Intuitive. Las herramientas de configuración fáciles de usar le brindan un control preciso sobre las acciones y los recursos intuitivos que desea exponer y los usuarios que pueden acceder a ellos.",
   },
 ]
 
