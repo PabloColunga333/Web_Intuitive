@@ -162,23 +162,53 @@ export const services = [
 
 export const faqs = [
   {
-    question: "¿Qué beneficios ofrece Intuitive ERP a las diferentes áreas?",
+    question: "¿Qué áreas se ven beneficiadas con su Sistemas Integrados de Manufactura ERP?",
     answer:
-      "Proporciona visibilidad e integridad de datos en toda la empresa. Mejora la planeación y control de la producción, inventarios, compras y finanzas, permitiendo decisiones más informadas y eficientes.",
+      "La integridad de datos a través de los ciclos de su empresa asegura que usted tenga mayor visibilidad en todas las áreas de su negocio de las operaciones diarias a un nivel estratégico de decisión, planeación y control en la producción, inventarios, compras y los datos financieros.",
   },
   {
-    question: "¿En qué sectores industriales se puede implementar?",
+    question: "¿Qué tipo de sectores se benefician más?",
     answer:
-      "Automotriz y aeroespacial, químicos y farmacéutico, bienes de consumo envasados, electrónica y equipamiento eléctrico, comida y bebidas, vidrio, cerámica y materiales básicos.",
+      "Muchas empresas, desde pequeñas y medianas empresas hasta grandes corporaciones se benefician con nuestro software ERP, por poner unos ejemplos Automotriz y aeroespacial, Productos químicos y farmacéuticos, Bienes de consumo envasados, Electrónica y equipamiento eléctrico. Comida y bebidas, Vidrio, cerámica y materiales básicos.",
   },
   {
-    question: "¿Qué tan personalizable es el sistema MRPII?",
+    question: "¿Es un software Integrado de Manufactura MRPII personalizable?",
     answer:
-      "Altamente personalizable: campos y tablas configurables, reglas de secuencia, scripts por evento, integración multi-sitio y gran flexibilidad para adaptarse a procesos únicos de cada empresa.",
+      "Los campos y las tablas de datos en su base de datos se pueden agregar o cambiar. Se pueden crear reglas de secuencia únicas. Los scripts de comunicación por evento pueden ser instalados con una estrecha integración con otros sistemas en múltiples sitios. Su flexibilidad es incomparable.",
   },
   {
-    question: "¿Qué resultados se pueden esperar?",
+    question: "¿Qué resultados se pueden esperar con este sistema ERP?",
     answer:
-      "Mayor rotación de inventarios, reducción de costos logísticos, programación de piso más eficiente, reducción de tiempo muerto y horas extra, planes acordes a capacidad instalada.",
+      "Mejorar los resultados gerenciales con mayor rotación de inventarios, Permitiendo al mismo tiempo reducir sus costos logísticos. El programar más eficiente el piso de fabricación reduce tiempo muerto y horas extras, haciendo planes acorde a la realidad de su capacidad instalada.",
+  },
+  {
+    question: "¿Qué diferencia Intuitive de otros ERP?",
+    answer:
+      "Su arquitectura exclusiva basada en Microsoft asegura una fácil administración así como integración y desarrollo para requisitos particulares, entrega una infraestructura tecnológica estable y escalable. Intuitive ERP es pionero en el uso de tecnología Microsoft punto Net y proporciona un nuevo nivel de funciones avanzadas.",
+  },
+  {
+    question: "¿INTUITIVE software puede resolver problemas específicos?",
+    answer:
+      "Cuenta con opciones personalizadas para resolver problemas específicos de programación y crear herramientas de manipulación de datos personalizados para usar con el motor de flujo de trabajo.",
+  },
+  {
+    question: "¿Qué retorno de inversión puedo esperar?",
+    answer:
+      "Intuitive ERP proporciona una constante y sólida ventaja financiera medible dentro del primer año después de su implementación. Aumento en la satisfacción del cliente basado en mejorar sus tiempos de entrega, calidad creciente, plazos de entrega acortados, etc.",
+  },
+  {
+    question: "¿Puedo disponer de una demo del sistema para mi empresa?",
+    answer:
+      "Ofrecemos un demo de un mes para que tengas la posibilidad de conocer a detalle los beneficios de cada uno de los módulos correspondientes a cada paquete y así puedas resolver y aclarar cualquier duda, guiado por la asesoría de un consultor.",
+  },
+  {
+    question: "¿Qué tipo de soporte ofrece la empresa, es únicamente en Querétaro?",
+    answer:
+      "Contamos con el mejor servicio a usuarios. Telefónico, chat y conexión remota",
+  },
+  {
+    question: "¿El sistema para pymes MRP II cuenta con manuales o videos?",
+    answer:
+      "CONTAMOS CON EL MEJOR SISTEMA DE CAPACITACIÓN, Videos, tutoriales, manuales de usuario en línea. Todo al alcance de tu mano.",
   },
 ]
