@@ -8,7 +8,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Calendar, Clock } from "lucide-react"
+import { PiCalendar, PiClock } from "react-icons/pi"
 
 
 const blogPosts = [
@@ -263,11 +263,11 @@ export default function BlogPage() {
                     <div className="p-5 sm:p-6 flex flex-col flex-1">
                       <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <PiCalendar className="w-3 h-3 sm:w-4 sm:h-4" />
                           {post.date}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <PiClock className="w-3 h-3 sm:w-4 sm:h-4" />
                           {post.readTime}
                         </span>
                       </div>
@@ -319,11 +319,11 @@ export default function BlogPage() {
                       </DialogTitle>
                       <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          <PiCalendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                           {selectedPost.date}
                         </span>
                         <span className="flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                          <PiClock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                           {selectedPost.readTime} de lectura
                         </span>
                       </div>

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
-import { Loader2, CheckCircle2, AlertCircle } from "lucide-react"
+import { PiSpinner, PiCheck, PiWarning } from "react-icons/pi"
 
 interface ContactFormProps {
   subject?: string
@@ -179,7 +179,7 @@ export function ContactForm({
     return (
       <div className="text-center py-12 sm:py-16 px-4 sm:px-6">
         <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-500/20 border-2 border-green-500/50 flex items-center justify-center mx-auto mb-5 sm:mb-6 animate-in zoom-in duration-300">
-          <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
+          <PiCheck className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
         </div>
         <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-green-500">¡Mensaje enviado con éxito!</h3>
         <p className="text-muted-foreground mb-2 text-base sm:text-lg">Hemos recibido tu mensaje correctamente.</p>
@@ -223,7 +223,7 @@ export function ContactForm({
           />
           {errors.name && touched.name && (
             <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />
+              <PiWarning className="w-3 h-3" />
               {errors.name}
             </p>
           )}
@@ -245,7 +245,7 @@ export function ContactForm({
           />
           {errors.company && touched.company && (
             <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />
+              <PiWarning className="w-3 h-3" />
               {errors.company}
             </p>
           )}
@@ -271,7 +271,7 @@ export function ContactForm({
           />
           {errors.email && touched.email && (
             <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />
+              <PiWarning className="w-3 h-3" />
               {errors.email}
             </p>
           )}
@@ -294,7 +294,7 @@ export function ContactForm({
           />
           {errors.phone && touched.phone && (
             <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
-              <AlertCircle className="w-3 h-3" />
+              <PiWarning className="w-3 h-3" />
               {errors.phone}
             </p>
           )}
@@ -330,7 +330,7 @@ export function ContactForm({
         </Select>
         {errors.requestType && touched.requestType && (
           <p className="text-red-500 text-xs sm:text-sm mt-1 flex items-center gap-1">
-            <AlertCircle className="w-3 h-3" />
+            <PiWarning className="w-3 h-3" />
             {errors.requestType}
           </p>
         )}
@@ -354,7 +354,7 @@ export function ContactForm({
       <Button type="submit" disabled={loading} className="w-full h-12 text-base glow-primary">
         {loading ? (
           <>
-            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+            <PiSpinner className="w-4 h-4 mr-2 animate-spin" />
             Enviando...
           </>
         ) : (

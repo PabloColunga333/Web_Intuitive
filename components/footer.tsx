@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Linkedin, Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react"
+import { PiLinkedinLogo, PiFacebookLogo, PiPhone, PiEnvelope, PiMapPin, PiClock, PiArrowUpRight } from "react-icons/pi"
 import { siteConfig } from "@/lib/site-data"
 
 export function Footer() {
@@ -44,7 +44,7 @@ export function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <PiLinkedinLogo className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href={siteConfig.social.facebook}
@@ -53,7 +53,7 @@ export function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
                 aria-label="Facebook"
               >
-                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+                <PiFacebookLogo className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
@@ -68,7 +68,7 @@ export function Footer() {
                     className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 group py-0.5"
                   >
                     {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+                    <PiArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -85,7 +85,7 @@ export function Footer() {
                     className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 group py-0.5"
                   >
                     {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+                    <PiArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -100,7 +100,7 @@ export function Footer() {
                   href={`tel:${siteConfig.contact.phoneRaw}`}
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5"
                 >
-                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 text-primary flex-shrink-0" />
+                  <PiPhone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                   <span>{siteConfig.contact.phone}</span>
                 </a>
               </li>
@@ -109,16 +109,16 @@ export function Footer() {
                   href={`mailto:${siteConfig.contact.email}`}
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5 break-all"
                 >
-                  <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 text-primary flex-shrink-0" />
+                  <PiEnvelope className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                   <span>{siteConfig.contact.email}</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
-                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 text-primary flex-shrink-0" />
+                <PiMapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                 <span>{siteConfig.contact.location}</span>
               </li>
               <li className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
-                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 text-primary flex-shrink-0" />
+                <PiClock className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                 <div>
                   <span className="block">L-V: 9am - 6pm</span>
                   <span className="block text-[10px] sm:text-xs">Urgencias 24/7</span>

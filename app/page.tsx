@@ -9,7 +9,7 @@ import { ServicesPreview } from "@/components/sections/services-preview"
 import { FAQ } from "@/components/sections/faq"
 import { ContactForm } from "@/components/contact-form"
 import { siteConfig } from "@/lib/site-data"
-import { Phone, Mail, MapPin, MessageCircle, PhoneCall } from "lucide-react"
+import { PiPhone, PiEnvelope, PiMapPin, PiWhatsappLogo } from "react-icons/pi"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -27,11 +27,11 @@ export default function HomePage() {
         <ServicesPreview />
         <FAQ />
 
-        <section className="py-24 relative" id="contacto">
+        <section className="py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
 
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto section-shell p-10 md:p-12">
               {/* Header con gancho */}
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">Hablemos de tu operación</h2>
@@ -47,8 +47,8 @@ export default function HomePage() {
                     <h3 className="font-semibold text-lg mb-5">Información de contacto</h3>
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Phone className="w-5 h-5 text-primary" />
+                        <div className="icon-container">
+                          <PiPhone className="icon-md" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Teléfono</p>
@@ -61,8 +61,8 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Mail className="w-5 h-5 text-primary" />
+                        <div className="icon-container">
+                          <PiEnvelope className="icon-md" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Correo</p>
@@ -75,8 +75,8 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <MapPin className="w-5 h-5 text-primary" />
+                        <div className="icon-container">
+                          <PiMapPin className="icon-md" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Ubicación</p>
@@ -91,7 +91,7 @@ export default function HomePage() {
                     <div className="grid grid-cols-2 gap-3">
                       <Button asChild variant="outline" size="sm" className="h-auto py-3 flex-col gap-1 bg-transparent">
                         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                          <MessageCircle className="w-5 h-5 text-[#25D366]" />
+                          <PiWhatsappLogo className="w-7 h-7 text-[#25D366]" />
                           <span className="text-xs">WhatsApp</span>
                         </a>
                       </Button>

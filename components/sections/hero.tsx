@@ -1,17 +1,18 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, MessageCircle, BarChart3, Shield, Zap } from "lucide-react"
+import { PiArrowRight, PiWhatsappLogo, PiChartLine, PiShieldCheck, PiStar } from "react-icons/pi"
 import { siteConfig } from "@/lib/site-data"
 
 export function Hero() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 industrial-grid -z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-background -z-10" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-[128px] -z-10" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/15 rounded-full blur-[100px] -z-10" />
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden hero-mesh">
+      <div className="absolute inset-0 hero-grid-premium -z-10" />
+      <div className="absolute inset-0 hero-grid-overlay -z-9" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-background -z-10" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/22 rounded-full blur-[128px] -z-10 animate-float-soft" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/18 rounded-full blur-[100px] -z-10 animate-float-soft" />
 
       <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-32">
         <div className="max-w-5xl mx-auto">
@@ -31,20 +32,20 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 animate-fade-up animation-delay-300">
-            <Button asChild size="lg" className="text-base h-12 sm:h-14 px-6 sm:px-8 glow-primary w-full sm:w-auto">
-              <Link href="/contacto">
+            <Button asChild size="lg" className="text-base glow-primary">
+              <Link href="/contacto" className="flex items-center gap-2">
                 Solicitar demo gratuita
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <PiArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="text-base h-12 sm:h-14 px-6 sm:px-8 bg-transparent border-[#25D366]/50 text-[#25D366] hover:bg-[#25D366]/10 hover:border-[#25D366] w-full sm:w-auto"
+              className="text-base text-white bg-[linear-gradient(120deg,#2fe075,#22c35e)] border-[#1fa755] shadow-lg shadow-[#25D366]/35 hover:shadow-[#25D366]/50 hover:-translate-y-[1px] transition-transform"
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="mr-2 w-5 h-5" />
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} />
                 Hablar por WhatsApp
               </a>
             </Button>
@@ -52,16 +53,31 @@ export function Hero() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-up animation-delay-400">
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <div className="flex justify-center mb-3">
+                <div className="icon-container">
+                  <PiChartLine className="icon-md" />
+                </div>
+              </div>
               <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
+              <div className="flex justify-center mb-3">
+                <div className="icon-container">
+                  <PiShieldCheck className="icon-md" />
+                </div>
+              </div>
               <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
+              <div className="flex justify-center mb-3">
+                <div className="icon-container">
+                  <PiStar className="icon-md" />
+                </div>
+              </div>
               <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</h3>
               <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
             </div>

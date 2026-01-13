@@ -3,12 +3,12 @@ import { services } from "@/lib/site-data"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ShoppingCart, Lightbulb, Headphones, CheckCircle2, ArrowRight } from "lucide-react"
+import { PiShoppingCart, PiLightbulb, PiHeadphones, PiCheck, PiArrowRight } from "react-icons/pi"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  "shopping-cart": ShoppingCart,
-  lightbulb: Lightbulb,
-  headphones: Headphones,
+  "shopping-cart": PiShoppingCart,
+  lightbulb: PiLightbulb,
+  headphones: PiHeadphones,
 }
 
 export function ServicesPreview() {
@@ -46,13 +46,11 @@ export function ServicesPreview() {
                   )}
 
                   <div
-                    className={`w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center mb-5 sm:mb-6 transition-colors ${
-                      isHighlighted
-                        ? "bg-primary/30 group-hover:bg-primary/40"
-                        : "bg-primary/20 group-hover:bg-primary/30"
+                    className={`icon-container mb-5 sm:mb-6 w-fit transition-colors ${
+                      isHighlighted ? "bg-primary/30" : "bg-primary/20"
                     }`}
                   >
-                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                    <Icon className="icon-md" />
                   </div>
 
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">{service.title}</h3>
@@ -63,7 +61,7 @@ export function ServicesPreview() {
                   <ul className="space-y-2 mb-5 sm:mb-6">
                     {service.items.slice(0, 3).map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm">
-                        <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <PiCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-muted-foreground leading-relaxed">{item}</span>
                       </li>
                     ))}
@@ -76,7 +74,7 @@ export function ServicesPreview() {
                   >
                     <Link href="/contacto">
                       Hablar con un especialista
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      <PiArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
                 </Card>

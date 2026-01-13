@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { ContactForm } from "@/components/contact-form"
 import { Card } from "@/components/ui/card"
-import { Phone, Mail, MapPin, MessageCircle, PhoneCall, Clock } from "lucide-react"
+import { PiPhone, PiEnvelope, PiMapPin, PiWhatsappLogo, PiClock } from "react-icons/pi"
 import { siteConfig } from "@/lib/site-data"
 import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
@@ -49,8 +49,8 @@ export default function ContactoPage() {
                     <h2 className="font-semibold text-xl mb-6">Información de contacto</h2>
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Phone className="w-5 h-5 text-primary" />
+                        <div className="flex items-center justify-center flex-shrink-0">
+                          <PiPhone className="w-7 h-7 text-primary" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Teléfono</p>
@@ -64,8 +64,8 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <Mail className="w-5 h-5 text-primary" />
+                        <div className="flex items-center justify-center flex-shrink-0">
+                          <PiEnvelope className="w-7 h-7 text-primary" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Correo electrónico</p>
@@ -79,8 +79,8 @@ export default function ContactoPage() {
                       </div>
 
                       <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                          <MapPin className="w-5 h-5 text-primary" />
+                        <div className="flex items-center justify-center flex-shrink-0">
+                          <PiMapPin className="w-7 h-7 text-primary" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Ubicación</p>
@@ -96,7 +96,7 @@ export default function ContactoPage() {
                     <div className="grid grid-cols-2 gap-3">
                       <Button asChild className="h-auto py-3 flex-col gap-1 bg-[#25D366] hover:bg-[#20BA5A]">
                         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                          <MessageCircle className="w-5 h-5" />
+                          <PiWhatsappLogo className="w-7 h-7" />
                           <span className="text-xs">WhatsApp</span>
                         </a>
                       </Button>
@@ -106,8 +106,8 @@ export default function ContactoPage() {
 
                   <Card className="p-6 glass border-border/50">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Clock className="w-5 h-5 text-primary" />
+                      <div className="flex items-center justify-center flex-shrink-0">
+                        <PiClock className="w-7 h-7 text-primary" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2">Horario de atención</h3>

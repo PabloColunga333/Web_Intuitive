@@ -1,12 +1,13 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
+import { Manrope } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "@/components/ui/toaster"
 import { CookieConsent } from "@/components/cookie-consent"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
   title: "Intuitive ERP | Planeación y Control de Manufactura en Tiempo Real",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0f172a" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a12" },
   ],
   width: "device-width",
@@ -59,12 +60,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es-MX">
-      <body className={`${inter.className} font-sans antialiased`}>
-        {children}
-        <Toaster />
-        <CookieConsent />
-        <Analytics />
+    <html lang="es-MX" suppressHydrationWarning>
+      <body className={`${manrope.className} font-sans antialiased`}>
+        <ThemeProvider>
+          <div className="background-canvas min-h-screen">
+            {children}
+            <Toaster />
+            <CookieConsent />
+            <Analytics />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

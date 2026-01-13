@@ -64,12 +64,8 @@ export default function ServiciosPage() {
 
                     <div className="flex flex-col lg:flex-row gap-8">
                       <div className="flex-shrink-0">
-                        <div
-                          className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
-                            isSupport ? "bg-primary/30" : "bg-primary/20"
-                          }`}
-                        >
-                          <Icon className="w-8 h-8 text-primary" />
+                        <div className="flex items-center justify-center">
+                          <Icon className="w-10 h-10 text-primary" />
                         </div>
                       </div>
                       <div className="flex-grow">
@@ -126,7 +122,7 @@ export default function ServiciosPage() {
                   className="border-[#25D366]/50 text-[#25D366] hover:bg-[#25D366]/10 bg-transparent"
                 >
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <MessageCircle className="w-6 h-6 mr-2" />
                     WhatsApp
                   </a>
                 </Button>

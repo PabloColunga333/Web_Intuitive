@@ -4,15 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Monitor, Scan, Shield, BarChart3, Bell, Code } from "lucide-react"
+import { PiArrowRight, PiMonitor, PiScan, PiShieldCheck, PiChartLine, PiBell, PiCode } from "react-icons/pi"
 
 const capabilityIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  "gerente-planta": Monitor,
-  "recopilacion-datos": Scan,
-  unipoint: Shield,
-  analytics: BarChart3,
-  emf: Bell,
-  webapi: Code,
+  "gerente-planta": PiMonitor,
+  "recopilacion-datos": PiScan,
+  unipoint: PiShieldCheck,
+  analytics: PiChartLine,
+  emf: PiBell,
+  webapi: PiCode,
 }
 
 export function ExtendedCapabilities() {
@@ -64,12 +64,12 @@ export function ExtendedCapabilities() {
                         <Button asChild className="group w-full sm:w-auto h-11 sm:h-10">
                           <Link href="/contacto?tipo=demo">
                             Solicitar evaluación
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                            <PiArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                           </Link>
                         </Button>
                       </div>
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-2xl sm:rounded-3xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-primary" />
+                      <div className="icon-container" style={{ width: "fit-content", padding: "1rem" }}>
+                        <Icon className="icon-lg" />
                       </div>
                     </div>
                   </Card>

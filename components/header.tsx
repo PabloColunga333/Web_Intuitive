@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X, MessageCircle, ArrowRight } from "lucide-react"
+import { PiList, PiX, PiWhatsappLogo, PiArrowRight } from "react-icons/pi"
 import { siteConfig } from "@/lib/site-data"
 
 export function Header() {
@@ -65,15 +65,15 @@ export function Header() {
               size="sm"
               className="text-[#25D366] hover:text-[#25D366] hover:bg-[#25D366]/10"
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-4 h-4 mr-2" />
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} />
                 WhatsApp
               </a>
             </Button>
             <Button asChild size="sm" className="glow-primary">
               <Link href="/contacto">
                 Solicitar demo
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <PiArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
           </div>
@@ -84,7 +84,7 @@ export function Header() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <PiX className="w-6 h-6" /> : <PiList className="w-6 h-6" />}
           </button>
         </div>
 
@@ -104,14 +104,14 @@ export function Header() {
               <div className="flex flex-col gap-2 pt-4 mt-2 border-t border-border/50">
                 <Button asChild variant="outline" size="sm" className="justify-center bg-transparent">
                   <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <PiWhatsappLogo className="w-6 h-6 mr-2" />
                     WhatsApp
                   </a>
                 </Button>
                 <Button asChild size="sm" className="justify-center">
                   <Link href="/contacto" onClick={() => setIsOpen(false)}>
                     Solicitar demo
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <PiArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
               </div>

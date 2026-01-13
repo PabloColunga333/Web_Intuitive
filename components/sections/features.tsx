@@ -31,6 +31,8 @@ export function Features() {
   const [selectedFeature, setSelectedFeature] = useState<(typeof features)[0] | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState<"left" | "right">("right")
+  const [maxHeight, setMaxHeight] = useState<number | null>(null)
+  const cardRef = React.useRef<HTMLDivElement>(null)
 
   const nextSlide = () => {
     setDirection("right")
@@ -66,6 +68,29 @@ export function Features() {
     visibleFeatures.push(...features.slice(0, visibleCards - visibleFeatures.length))
   }
 
+  // Calcular altura máxima de las tarjetas
+  useEffect(() => {
+    const updateMaxHeight = () => {
+      if (cardRef.current) {
+        const cards = cardRef.current.querySelectorAll('[data-card]')
+        let maxH = 0
+        cards.forEach((card) => {
+          const height = (card as HTMLElement).offsetHeight
+          if (height > maxH) maxH = height
+        })
+        if (maxH > 0) setMaxHeight(maxH)
+      }
+    }
+
+    updateMaxHeight()
+    window.addEventListener("resize", updateMaxHeight)
+    const timer = setTimeout(updateMaxHeight, 100)
+    return () => {
+      window.removeEventListener("resize", updateMaxHeight)
+      clearTimeout(timer)
+    }
+  }, [visibleCards, currentIndex])
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 relative" id="caracteristicas">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
@@ -95,8 +120,9 @@ export function Features() {
             {/* Tarjetas del Carrusel */}
             <div className="flex-1 overflow-hidden">
               <div
+                ref={cardRef}
                 key={`${currentIndex}-${visibleCards}-${direction}`}
-                className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 transform-gpu ${
+                className={`features-grid gap-4 sm:gap-6 transform-gpu ${
                   direction === "right" ? "animate-carousel-right" : "animate-carousel-left"
                 }`}
               >
@@ -107,18 +133,20 @@ export function Features() {
                   return (
                     <Card
                       key={feature.id}
-                      className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98]"
+                      data-card
+                      style={maxHeight ? { height: `${maxHeight}px` } : {}}
+                      className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98] flex flex-col"
                       onClick={() => setSelectedFeature(feature)}
                     >
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-primary/30 transition-colors">
-                        <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                      <div className="flex items-center justify-center mb-4 sm:mb-5">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                       </div>
 
                       <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                         {feature.title}
                       </h3>
 
-                      <ul className="space-y-2 mb-4">
+                      <ul className="space-y-2 mb-4 flex-grow">
                         {bullets.map((bullet, idx) => (
                           <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
                             <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
@@ -178,10 +206,10 @@ export function Features() {
             <>
               <DialogHeader>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center mb-2">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     {(() => {
                       const Icon = iconMap[selectedFeature.icon]
-                      return <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                      return <Icon className="w-8 h-8 sm:w-9 sm:h-9 text-primary" />
                     })()}
                   </div>
                   <DialogTitle className="text-lg sm:text-xl">{selectedFeature.title}</DialogTitle>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { MessageCircle, X } from "lucide-react"
+import { PiWhatsappLogo, PiX } from "react-icons/pi"
 import { siteConfig } from "@/lib/site-data"
 
 export function WhatsAppFloat() {
@@ -36,7 +36,7 @@ export function WhatsAppFloat() {
             className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-secondary flex items-center justify-center hover:bg-secondary/80 transition-colors"
             aria-label="Cerrar"
           >
-            <X className="w-3 h-3" />
+            <PiX className="w-4 h-4" />
           </button>
           <p className="text-sm font-medium mb-1">¿Tienes preguntas?</p>
           <p className="text-xs text-muted-foreground">Escríbenos por WhatsApp</p>
@@ -51,7 +51,7 @@ export function WhatsAppFloat() {
         className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 transition-all hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 animate-pulse hover:animate-none"
         aria-label="Contactar por WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 text-white" />
+        <PiWhatsappLogo className="w-9 h-9 text-white" />
       </a>
     </div>
   )
