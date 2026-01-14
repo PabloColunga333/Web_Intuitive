@@ -65,26 +65,33 @@ export function Header() {
               size="sm"
               className="text-[#25D366] hover:text-[#25D366] hover:bg-[#25D366]/10"
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} />
-                WhatsApp
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-1"
+                aria-label="Contactar por WhatsApp"
+              >
+                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} aria-hidden="true" />
+                <span>WhatsApp</span>
               </a>
             </Button>
             <Button asChild size="sm" className="glow-primary">
-              <Link href="/contacto">
-                Solicitar demo
-                <PiArrowRight className="w-4 h-4 ml-2" />
+              <Link href="/contacto" aria-label="Solicitar demostración del producto">
+                <span>Solicitar demo</span>
+                <PiArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isOpen}
           >
-            {isOpen ? <PiX className="w-6 h-6" /> : <PiList className="w-6 h-6" />}
+            {isOpen ? <PiX className="w-6 h-6" aria-hidden="true" /> : <PiList className="w-6 h-6" aria-hidden="true" />}
           </button>
         </div>
 
@@ -102,16 +109,25 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 mt-2 border-t border-border/50">
-                <Button asChild variant="outline" size="sm" className="justify-center bg-transparent">
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                    <PiWhatsappLogo className="w-6 h-6 mr-2" />
-                    WhatsApp
+                <Button asChild variant="outline" size="default" className="justify-center bg-transparent min-h-[44px]">
+                  <a 
+                    href={whatsappLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Contactar por WhatsApp"
+                  >
+                    <PiWhatsappLogo className="w-6 h-6 mr-2" aria-hidden="true" />
+                    <span>WhatsApp</span>
                   </a>
                 </Button>
-                <Button asChild size="sm" className="justify-center">
-                  <Link href="/contacto" onClick={() => setIsOpen(false)}>
-                    Solicitar demo
-                    <PiArrowRight className="w-5 h-5 ml-2" />
+                <Button asChild size="default" className="justify-center min-h-[44px]">
+                  <Link 
+                    href="/contacto" 
+                    onClick={() => setIsOpen(false)}
+                    aria-label="Solicitar demostración del producto"
+                  >
+                    <span>Solicitar demo</span>
+                    <PiArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
                   </Link>
                 </Button>
               </div>

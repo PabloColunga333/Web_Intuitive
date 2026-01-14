@@ -7,7 +7,12 @@ import { CookieConsent } from "@/components/cookie-consent"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
+const manrope = Manrope({ 
+  subsets: ["latin"], 
+  weight: ["400", "500", "600", "700"],
+  display: 'swap',
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: "Intuitive ERP | Planeación y Control de Manufactura en Tiempo Real",
@@ -43,6 +48,17 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export const viewport: Viewport = {
@@ -61,6 +77,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-MX" suppressHydrationWarning>
+      <head>
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${manrope.className} font-sans antialiased`}>
         <ThemeProvider>
           <div className="background-canvas min-h-screen">

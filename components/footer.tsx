@@ -42,18 +42,18 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
-                aria-label="LinkedIn"
+                aria-label="Visitar perfil de LinkedIn de Intuitive ERP"
               >
-                <PiLinkedinLogo className="w-5 h-5 sm:w-6 sm:h-6" />
+                <PiLinkedinLogo className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
               </a>
               <a
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
-                aria-label="Facebook"
+                aria-label="Visitar página de Facebook de Intuitive ERP"
               >
-                <PiFacebookLogo className="w-5 h-5 sm:w-6 sm:h-6" />
+                <PiFacebookLogo className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -99,8 +99,9 @@ export function Footer() {
                 <a
                   href={`tel:${siteConfig.contact.phoneRaw}`}
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5"
+                  aria-label={`Llamar al teléfono ${siteConfig.contact.phone}`}
                 >
-                  <PiPhone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
+                  <PiPhone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
                   <span>{siteConfig.contact.phone}</span>
                 </a>
               </li>
@@ -108,8 +109,9 @@ export function Footer() {
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5 break-all"
+                  aria-label={`Enviar correo a ${siteConfig.contact.email}`}
                 >
-                  <PiEnvelope className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
+                  <PiEnvelope className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
                   <span>{siteConfig.contact.email}</span>
                 </a>
               </li>

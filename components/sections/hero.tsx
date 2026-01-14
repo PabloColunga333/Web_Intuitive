@@ -33,9 +33,9 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 animate-fade-up animation-delay-300">
             <Button asChild size="lg" className="text-base glow-primary">
-              <Link href="/contacto" className="flex items-center gap-2">
-                Solicitar demo gratuita
-                <PiArrowRight className="w-5 h-5" />
+              <Link href="/contacto" className="flex items-center gap-2" aria-label="Solicitar demostración gratuita del producto">
+                <span>Solicitar demo gratuita</span>
+                <PiArrowRight className="w-5 h-5" aria-hidden="true" />
               </Link>
             </Button>
             <Button
@@ -44,9 +44,15 @@ export function Hero() {
               size="lg"
               className="text-base text-white bg-[linear-gradient(120deg,#2fe075,#22c35e)] border-[#1fa755] shadow-lg shadow-[#25D366]/35 hover:shadow-[#25D366]/50 hover:-translate-y-[1px] transition-transform"
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} />
-                Hablar por WhatsApp
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2"
+                aria-label="Iniciar conversación por WhatsApp"
+              >
+                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} aria-hidden="true" />
+                <span>Hablar por WhatsApp</span>
               </a>
             </Button>
           </div>
@@ -55,30 +61,30 @@ export function Hero() {
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiChartLine className="icon-md" />
+                  <PiChartLine className="icon-md" aria-hidden="true" />
                 </div>
               </div>
-              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</h3>
+              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</p>
               <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiShieldCheck className="icon-md" />
+                  <PiShieldCheck className="icon-md" aria-hidden="true" />
                 </div>
               </div>
-              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</h3>
+              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</p>
               <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
             </div>
 
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiStar className="icon-md" />
+                  <PiStar className="icon-md" aria-hidden="true" />
                 </div>
               </div>
-              <h3 className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</h3>
+              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</p>
               <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
             </div>
           </div>

@@ -48,13 +48,14 @@ export default function HomePage() {
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiPhone className="icon-md" />
+                          <PiPhone className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Teléfono</p>
                           <a
                             href={`tel:${siteConfig.contact.phoneRaw}`}
                             className="text-muted-foreground hover:text-primary transition-colors"
+                            aria-label={`Llamar al ${siteConfig.contact.phone}`}
                           >
                             {siteConfig.contact.phone}
                           </a>
@@ -62,13 +63,14 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiEnvelope className="icon-md" />
+                          <PiEnvelope className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Correo</p>
                           <a
                             href={`mailto:${siteConfig.contact.email}`}
                             className="text-muted-foreground hover:text-primary transition-colors"
+                            aria-label={`Enviar correo a ${siteConfig.contact.email}`}
                           >
                             {siteConfig.contact.email}
                           </a>
@@ -76,7 +78,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiMapPin className="icon-md" />
+                          <PiMapPin className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Ubicación</p>
@@ -89,9 +91,14 @@ export default function HomePage() {
                   <Card className="p-6 glass border-border/50">
                     <h3 className="font-semibold mb-4">Acciones rápidas</h3>
                     <div className="grid grid-cols-2 gap-3">
-                      <Button asChild variant="outline" size="sm" className="h-auto py-3 flex-col gap-1 bg-transparent">
-                        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                          <PiWhatsappLogo className="w-7 h-7 text-[#25D366]" />
+                      <Button asChild variant="outline" size="default" className="h-auto py-4 flex-col gap-2 bg-transparent min-h-[80px]">
+                        <a 
+                          href={whatsappLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label="Enviar mensaje por WhatsApp"
+                        >
+                          <PiWhatsappLogo className="w-7 h-7 text-[#25D366]" aria-hidden="true" />
                           <span className="text-xs">WhatsApp</span>
                         </a>
                       </Button>

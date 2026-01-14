@@ -1,0 +1,7 @@
+# Intuitive ERP - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://www.tudominio.com/sitemap.xml
