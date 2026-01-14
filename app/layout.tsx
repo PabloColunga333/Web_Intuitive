@@ -88,7 +88,7 @@ export default function RootLayout({
             {children}
             <Toaster />
             <CookieConsent />
-            <Analytics />
+            {process.env.NODE_ENV === 'production' && <Analytics />}
           </div>
         </ThemeProvider>
       </body>

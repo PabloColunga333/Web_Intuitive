@@ -85,9 +85,9 @@ export default function ServiciosPage() {
                         </div>
 
                         <Button asChild className="group">
-                          <Link href="/contacto">
-                            Hablar con un especialista
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          <Link href="/contacto" aria-label={`Hablar con un especialista sobre ${service.title}`}>
+                            <span>Hablar con un especialista</span>
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                           </Link>
                         </Button>
                       </div>

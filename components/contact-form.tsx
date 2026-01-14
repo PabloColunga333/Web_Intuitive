@@ -317,6 +317,7 @@ export function ContactForm({
               errors.requestType && touched.requestType ? "border-red-500 focus:border-red-500" : ""
             }`}
             onBlur={() => handleBlur("requestType")}
+            aria-label="Tipo de solicitud"
           >
             <SelectValue placeholder="Selecciona una opción" />
           </SelectTrigger>
@@ -351,14 +352,14 @@ export function ContactForm({
         />
       </div>
 
-      <Button type="submit" disabled={loading} className="w-full h-12 text-base glow-primary">
+      <Button type="submit" disabled={loading} className="w-full h-12 text-base glow-primary font-semibold" aria-label="Enviar formulario de contacto">
         {loading ? (
           <>
-            <PiSpinner className="w-4 h-4 mr-2 animate-spin" />
-            Enviando...
+            <PiSpinner className="w-4 h-4 mr-2 animate-spin" aria-hidden="true" />
+            <span>Enviando...</span>
           </>
         ) : (
-          "Enviar mensaje"
+          <span>Enviar mensaje</span>
         )}
       </Button>
 

@@ -41,10 +41,15 @@ export function FAQ() {
           <Card className="mt-8 sm:mt-10 p-5 sm:p-6 glass border-border/50 text-center">
             <h3 className="font-semibold text-base sm:text-lg mb-2">¿No encuentras respuesta a tu pregunta?</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-4">Escríbenos directamente y te ayudamos con tu caso específico</p>
-            <Button asChild className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full sm:w-auto">
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <PiWhatsappLogo className="w-7 h-7 mr-2" />
-                Preguntar por WhatsApp
+            <Button asChild className="bg-[#25D366] hover:bg-[#20BA5A] text-white w-full sm:w-auto font-semibold">
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Preguntar por WhatsApp sobre dudas específicas"
+              >
+                <PiWhatsappLogo className="w-7 h-7 mr-2" aria-hidden="true" />
+                <span>Preguntar por WhatsApp</span>
               </a>
             </Button>
           </Card>

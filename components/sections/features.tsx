@@ -180,7 +180,7 @@ export function Features() {
           </div>
 
           {/* Indicadores de Posición */}
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-3 mt-8">
             {Array.from({ length: features.length }).map((_, idx) => (
               <button
                 key={idx}
@@ -188,13 +188,19 @@ export function Features() {
                   setDirection(idx > currentIndex ? "right" : "left")
                   setCurrentIndex(idx)
                 }}
-                className={`h-2 rounded-full transition-all ${
+                className={`min-w-[44px] min-h-[44px] p-3 rounded-full transition-all flex items-center justify-center ${
                   idx >= currentIndex && idx < currentIndex + visibleCards
-                    ? "bg-primary w-8"
-                    : "bg-border/50 w-2 hover:bg-primary/50"
+                    ? "bg-primary/20"
+                    : "bg-transparent hover:bg-primary/10"
                 }`}
                 aria-label={`Ir a diapositiva ${idx + 1}`}
-              />
+              >
+                <span className={`block h-2 rounded-full transition-all ${
+                  idx >= currentIndex && idx < currentIndex + visibleCards
+                    ? "bg-primary w-8"
+                    : "bg-border/50 w-2"
+                }`} />
+              </button>
             ))}
           </div>
         </div>

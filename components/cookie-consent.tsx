@@ -43,8 +43,9 @@ export function CookieConsent() {
                 <a 
                   href="/privacidad" 
                   className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                  aria-label="Leer política de privacidad completa"
                 >
-                  Más información
+                  Leer política de privacidad
                 </a>
               </p>
             </div>
@@ -54,13 +55,15 @@ export function CookieConsent() {
               <Button
                 onClick={declineCookies}
                 variant="ghost"
-                className="text-xs px-3 py-1.5 h-auto hover:bg-muted"
+                className="text-sm px-4 py-2 min-h-[44px] hover:bg-muted font-medium"
+                aria-label="Rechazar cookies"
               >
                 Rechazar
               </Button>
               <Button
                 onClick={acceptCookies}
-                className="text-xs px-3 py-1.5 h-auto bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="text-sm px-4 py-2 min-h-[44px] bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                aria-label="Aceptar cookies"
               >
                 Aceptar
               </Button>

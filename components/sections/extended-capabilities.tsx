@@ -40,10 +40,11 @@ export function ExtendedCapabilities() {
                     <TabsTrigger
                       key={cap.id}
                       value={cap.id}
-                      className="px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm rounded-lg sm:rounded-xl whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:glass data-[state=inactive]:hover:bg-secondary/50 transition-all"
+                      className="px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm rounded-lg sm:rounded-xl whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-medium data-[state=inactive]:glass data-[state=inactive]:text-foreground data-[state=inactive]:hover:bg-secondary/50 transition-all"
+                      aria-label={`Ver capacidad: ${cap.title}`}
                     >
-                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-                      {cap.title}
+                      <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" aria-hidden="true" />
+                      <span>{cap.title}</span>
                     </TabsTrigger>
                   )
                 })}
@@ -62,9 +63,9 @@ export function ExtendedCapabilities() {
                           {cap.description}
                         </p>
                         <Button asChild className="group w-full sm:w-auto h-11 sm:h-10">
-                          <Link href="/contacto?tipo=demo">
-                            Solicitar evaluación
-                            <PiArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                          <Link href="/contacto?tipo=demo" aria-label={`Solicitar evaluación de ${cap.title}`}>
+                            <span>Solicitar evaluación</span>
+                            <PiArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                           </Link>
                         </Button>
                       </div>
