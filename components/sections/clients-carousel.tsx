@@ -72,25 +72,21 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
   }, [prefersReducedMotion, isHovering])
 
   return (
-    <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
-
-      <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Título */}
-          {showTitle && (
-            <div className="text-center mb-16 animate-fade-up">
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
-              </p>
-            </div>
-          )}
+    <div className="relative">
+      {/* Título con container normal (opcional) */}
+      {showTitle && (
+        <div className="container mx-auto px-4 mb-16">
+          <div className="max-w-7xl mx-auto text-center animate-fade-up">
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
+            </p>
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Carrusel Full Width */}
-      <div className="relative overflow-hidden w-full">
+      {/* Carrusel Edge-to-Edge: sin padding lateral */}
+      <div className="relative overflow-x-clip w-full">
         {/* Gradient overlay izquierda */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
 
@@ -100,7 +96,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar px-4 sm:px-12 lg:px-16"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
           style={{
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
@@ -156,6 +152,6 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           display: none;
         }
       `}</style>
-    </section>
+    </div>
   )
 }

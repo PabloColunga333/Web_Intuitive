@@ -57,9 +57,12 @@ export function Hero() {
               </a>
             </Button>
           </div>
-
-          <ClientsCarousel showInfo={false} showTitle={false} />
         </div>
+      </div>
+
+      {/* Carrusel Edge-to-Edge (fuera del container) */}
+      <div className="w-screen relative left-1/2 -translate-x-1/2 overflow-x-clip">
+        <ClientsCarousel showInfo={false} showTitle={false} />
       </div>
     </section>
   )
