@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 interface ClientsCarouselProps {
   title?: string
@@ -9,27 +10,31 @@ interface ClientsCarouselProps {
   showTitle?: boolean
 }
 
-const clients = [
-  "Mitsubishi Electric de México",
-  "Giesecke & Devrient",
-  "Graphic Packaging",
-  "Actia de Mexico",
-  "Grupo Polesa",
-  "Thor Químicos de México",
-  "Ediciones Fiscales ISEF",
-  "Grupo Graficos San Juan",
-  "Bolsas y Plásticos Internacionales",
-  "Hikam Electric De Mexico",
-  "Woodcrafters Home Products",
-  "GU Plumbing",
-  "OmexAlimentaria",
-  "Plásticos Arco Iris",
-  "GBOX",
+interface Client {
+  name: string
+  logo: string
+}
+
+const clients: Client[] = [
+  { name: "Mitsubishi Electric de México", logo: "https://logo.clearbit.com/mitsubishielectric.com" },
+  { name: "Giesecke & Devrient", logo: "https://logo.clearbit.com/gi-de.com" },
+  { name: "Graphic Packaging", logo: "https://logo.clearbit.com/graphicpkg.com" },
+  { name: "Actia de Mexico", logo: "https://logo.clearbit.com/actia.es" },
+  { name: "Grupo Polesa", logo: "https://logo.clearbit.com/polesa.com.mx" },
+  { name: "Thor Químicos de México", logo: "https://logo.clearbit.com/thorquimicos.com.mx" },
+  { name: "Ediciones Fiscales ISEF", logo: "https://logo.clearbit.com/edicionesfiscales.com.mx" },
+  { name: "Grupo Graficos San Juan", logo: "https://logo.clearbit.com/ggsa.com.mx" },
+  { name: "Bolsas y Plásticos Internacionales", logo: "https://logo.clearbit.com/bolsasyplasticos.com" },
+  { name: "Hikam Electric De Mexico", logo: "https://logo.clearbit.com/hikam.com.mx" },
+  { name: "Woodcrafters Home Products", logo: "https://logo.clearbit.com/woodcrafters.com" },
+  { name: "GU Plumbing", logo: "https://logo.clearbit.com/guplumbing.com" },
+  { name: "OmexAlimentaria", logo: "https://logo.clearbit.com/omexalimentaria.com" },
+  { name: "Plásticos Arco Iris", logo: "https://logo.clearbit.com/plasticosarcoiris.com.mx" },
+  { name: "GBOX", logo: "https://logo.clearbit.com/gbox.com.mx" },
 ]
 
 export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const [isHovering, setIsHovering] = useState(false)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const animationRef = useRef<number | null>(null)
 
@@ -48,7 +53,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
 
   useEffect(() => {
     const container = scrollContainerRef.current
-    if (!container || prefersReducedMotion || isHovering) return
+    if (!container || prefersReducedMotion) return
 
     let scrollPosition = 0
     const containerWidth = container.scrollWidth / 2 // Ya que duplicamos el contenido
@@ -69,7 +74,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [prefersReducedMotion, isHovering])
+  }, [prefersReducedMotion])
 
   return (
     <div className="relative">
@@ -101,18 +106,29 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
           }}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
         >
           {/* Contenido original */}
           {clients.map((client, index) => (
             <div
               key={`original-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
-              <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
-                {client}
-              </p>
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={80}
+                height={40}
+                className="max-h-16 w-auto object-contain"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement
+                  img.style.display = "none"
+                  const sibling = img.nextElementSibling as HTMLElement
+                  if (sibling) sibling.style.display = "block"
+                }}
+              />
+              <span className="hidden font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs text-center">
+                {client.name}
+              </span>
             </div>
           ))}
 
@@ -120,11 +136,24 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`duplicate-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
-              <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
-                {client}
-              </p>
+              <Image
+                src={client.logo}
+                alt={client.name}
+                width={80}
+                height={40}
+                className="max-h-16 w-auto object-contain"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement
+                  img.style.display = "none"
+                  const sibling = img.nextElementSibling as HTMLElement
+                  if (sibling) sibling.style.display = "block"
+                }}
+              />
+              <span className="hidden font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs text-center">
+                {client.name}
+              </span>
             </div>
           ))}
         </div>

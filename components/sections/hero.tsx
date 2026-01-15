@@ -31,7 +31,7 @@ export function Hero() {
             completa de tu operación.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 animate-fade-up animation-delay-300">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-0 animate-fade-up animation-delay-300">
             <Button asChild size="lg" className="text-base glow-primary">
               <Link href="/contacto" className="flex items-center gap-2" aria-label="Solicitar demostración gratuita del producto">
                 <span>Solicitar demo gratuita</span>

@@ -33,7 +33,7 @@ export default function HomePage() {
         <Hero />
         
         {/* Sección Carrusel de Clientes - Full Bleed Edge-to-Edge */}
-        <section className="relative py-8 sm:py-12">
+        <section className="relative -mt-8 sm:-mt-12 lg:-mt-16">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
           
           {/* Wrapper Full-Bleed */}
