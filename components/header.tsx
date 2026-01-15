@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { PiList, PiX, PiWhatsappLogo, PiArrowRight } from "react-icons/pi"
+import { Menu, X, MessageCircle, ArrowRight } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
 
 export function Header() {
@@ -72,14 +72,14 @@ export function Header() {
                 className="flex items-center gap-1"
                 aria-label="Contactar por WhatsApp"
               >
-                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} aria-hidden="true" />
+                <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 <span>WhatsApp</span>
               </a>
             </Button>
             <Button asChild size="sm" className="glow-primary">
               <Link href="/contacto" aria-label="Solicitar demostración del producto">
                 <span>Solicitar demo</span>
-                <PiArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Link>
             </Button>
           </div>
@@ -91,7 +91,7 @@ export function Header() {
             aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isOpen}
           >
-            {isOpen ? <PiX className="w-6 h-6" aria-hidden="true" /> : <PiList className="w-6 h-6" aria-hidden="true" />}
+            {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
           </button>
         </div>
 
@@ -116,7 +116,7 @@ export function Header() {
                     rel="noopener noreferrer"
                     aria-label="Contactar por WhatsApp"
                   >
-                    <PiWhatsappLogo className="w-6 h-6 mr-2" aria-hidden="true" />
+                    <MessageCircle className="w-6 h-6 mr-2" aria-hidden="true" />
                     <span>WhatsApp</span>
                   </a>
                 </Button>
@@ -127,7 +127,7 @@ export function Header() {
                     aria-label="Solicitar demostración del producto"
                   >
                     <span>Solicitar demo</span>
-                    <PiArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+                    <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
                   </Link>
                 </Button>
               </div>

@@ -2,7 +2,7 @@ import { faqs, siteConfig } from "@/lib/site-data"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { PiWhatsappLogo, PiQuestion } from "react-icons/pi"
+import { MessageCircle, HelpCircle } from "lucide-react"
 
 export function FAQ() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent("Hola, tengo una pregunta sobre Intuitive ERP.")}`
@@ -27,7 +27,7 @@ export function FAQ() {
               >
                 <AccordionTrigger className="text-left hover:no-underline py-5">
                   <div className="flex items-start gap-3">
-                    <PiQuestion className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <HelpCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                     <span className="font-semibold text-base">{faq.question}</span>
                   </div>
                 </AccordionTrigger>
@@ -48,7 +48,7 @@ export function FAQ() {
                 rel="noopener noreferrer"
                 aria-label="Preguntar por WhatsApp sobre dudas específicas"
               >
-                <PiWhatsappLogo className="w-7 h-7 mr-2" aria-hidden="true" />
+                <MessageCircle className="w-7 h-7 mr-2" aria-hidden="true" />
                 <span>Preguntar por WhatsApp</span>
               </a>
             </Button>

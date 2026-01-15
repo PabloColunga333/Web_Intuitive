@@ -5,9 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  
   // Optimización de rendimiento
   compress: true,
   poweredByHeader: false,
+  reactStrictMode: true,
   
   // Optimizar compilación para navegadores modernos
   compiler: {
@@ -16,7 +18,15 @@ const nextConfig = {
   
   // Configuración de Turbopack para mejor rendimiento
   experimental: {
-    optimizePackageImports: ['react-icons', 'lucide-react', '@radix-ui/react-accordion'],
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-tooltip',
+    ],
   },
   
   // Nota: Los headers async no funcionan con output: "export"

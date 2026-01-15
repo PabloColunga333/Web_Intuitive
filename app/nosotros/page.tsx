@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Card } from "@/components/ui/card"
-import { PiTarget, PiEye, PiMedal } from "react-icons/pi"
+import { Target, Eye, Award } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
@@ -81,7 +81,7 @@ export default function NosotrosPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card className="p-8 text-center">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <PiTarget className="w-12 h-12 text-primary" />
+                    <Target className="w-12 h-12 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Nuestra misión</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -92,7 +92,7 @@ export default function NosotrosPage() {
 
                 <Card className="p-8 text-center">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <PiEye className="w-12 h-12 text-primary" />
+                    <Eye className="w-12 h-12 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Nuestra visión</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -103,7 +103,7 @@ export default function NosotrosPage() {
 
                 <Card className="p-8 text-center">
                   <div className="flex items-center justify-center mx-auto mb-4">
-                    <PiMedal className="w-12 h-12 text-primary" />
+                    <Award className="w-12 h-12 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Nuestro compromiso</h3>
                   <p className="text-muted-foreground leading-relaxed">

@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { PiPhone, PiClock, PiWarning, PiMedal } from "react-icons/pi"
+import { Phone, Clock, AlertTriangle, Award } from "lucide-react"
 import Link from "next/link"
 import { siteConfig } from "@/lib/site-data"
 import type { Metadata } from "next"
@@ -37,7 +37,7 @@ export default function SoporteTecnicoPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <Card className="p-8">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4">
-                    <PiClock className="w-7 h-7 text-primary" />
+                    <Clock className="w-7 h-7 text-primary" />
                   </div>
                   <h2 className="text-2xl font-bold mb-4">Horario regular</h2>
                   <p className="text-lg text-muted-foreground mb-4">Lunes a Viernes</p>
@@ -47,7 +47,7 @@ export default function SoporteTecnicoPage() {
 
                 <Card className="p-8">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4">
-                    <PiWarning className="w-7 h-7 text-primary" />
+                    <AlertTriangle className="w-7 h-7 text-primary" />
                   </div>
                   <h2 className="text-2xl font-bold mb-4">Urgencias</h2>
                   <p className="text-lg text-muted-foreground mb-4">Soporte telefónico</p>
@@ -59,7 +59,7 @@ export default function SoporteTecnicoPage() {
               <Card className="p-8 lg:p-12 bg-primary/5 border-primary/20 mb-12">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <PiMedal className="w-7 h-7 text-primary" />
+                    <Award className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-grow">
                     <h2 className="text-2xl font-bold mb-3">Certificado por SIEMENS</h2>
@@ -104,7 +104,7 @@ export default function SoporteTecnicoPage() {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <PiPhone className="w-12 h-12 text-primary mx-auto mb-6" />
+              <Phone className="w-12 h-12 text-primary mx-auto mb-6" />
               <h2 className="text-3xl font-bold mb-4">¿Necesitas soporte técnico?</h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Comunícate con nosotros y nuestro equipo certificado te atenderá
@@ -112,7 +112,7 @@ export default function SoporteTecnicoPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
                   <a href={`tel:${siteConfig.contact.phoneRaw}`}>
-                    <PiPhone className="w-5 h-5 mr-2" />
+                    <Phone className="w-5 h-5 mr-2" />
                     Llamar ahora
                   </a>
                 </Button>

@@ -9,7 +9,7 @@ import { ServicesPreview } from "@/components/sections/services-preview"
 import { FAQ } from "@/components/sections/faq"
 import { ContactForm } from "@/components/contact-form"
 import { siteConfig } from "@/lib/site-data"
-import { PiPhone, PiEnvelope, PiMapPin, PiWhatsappLogo } from "react-icons/pi"
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -48,7 +48,7 @@ export default function HomePage() {
                     <div className="space-y-5">
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiPhone className="icon-md" aria-hidden="true" />
+                          <Phone className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Teléfono</p>
@@ -63,7 +63,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiEnvelope className="icon-md" aria-hidden="true" />
+                          <Mail className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Correo</p>
@@ -78,7 +78,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-start gap-4">
                         <div className="icon-container">
-                          <PiMapPin className="icon-md" aria-hidden="true" />
+                          <MapPin className="icon-md" aria-hidden="true" />
                         </div>
                         <div>
                           <p className="font-medium mb-1">Ubicación</p>
@@ -98,7 +98,7 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           aria-label="Enviar mensaje por WhatsApp"
                         >
-                          <PiWhatsappLogo className="w-7 h-7 text-[#25D366]" aria-hidden="true" />
+                          <MessageCircle className="w-7 h-7 text-[#25D366]" aria-hidden="true" />
                           <span className="text-xs">WhatsApp</span>
                         </a>
                       </Button>

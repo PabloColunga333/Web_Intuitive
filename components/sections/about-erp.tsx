@@ -1,5 +1,5 @@
 import { benefits } from "@/lib/site-data"
-import { PiArrowRight } from "react-icons/pi"
+import { ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -44,7 +44,7 @@ export function AboutERP() {
               <Button asChild variant="outline" className="mt-4 group bg-transparent h-11 sm:h-auto w-full sm:w-auto">
                 <Link href="/contacto">
                   Hablemos de tu operación
-                  <PiArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>

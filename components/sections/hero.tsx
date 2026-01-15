@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { PiArrowRight, PiWhatsappLogo, PiChartLine, PiShieldCheck, PiStar } from "react-icons/pi"
+import { ArrowRight, MessageCircle, TrendingUp, ShieldCheck, Star } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
 
 export function Hero() {
@@ -35,7 +35,7 @@ export function Hero() {
             <Button asChild size="lg" className="text-base glow-primary">
               <Link href="/contacto" className="flex items-center gap-2" aria-label="Solicitar demostración gratuita del producto">
                 <span>Solicitar demo gratuita</span>
-                <PiArrowRight className="w-5 h-5" aria-hidden="true" />
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </Link>
             </Button>
             <Button
@@ -51,7 +51,7 @@ export function Hero() {
                 className="flex items-center gap-2"
                 aria-label="Iniciar conversación por WhatsApp"
               >
-                <PiWhatsappLogo style={{ width: '1.5rem', height: '1.5rem' }} aria-hidden="true" />
+                <MessageCircle style={{ width: '1.5rem', height: '1.5rem' }} aria-hidden="true" />
                 <span>Hablar por WhatsApp</span>
               </a>
             </Button>
@@ -61,7 +61,7 @@ export function Hero() {
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiChartLine className="icon-md" aria-hidden="true" />
+                  <TrendingUp className="icon-md" aria-hidden="true" />
                 </div>
               </div>
               <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</p>
@@ -71,7 +71,7 @@ export function Hero() {
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiShieldCheck className="icon-md" aria-hidden="true" />
+                  <ShieldCheck className="icon-md" aria-hidden="true" />
                 </div>
               </div>
               <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</p>
@@ -81,7 +81,7 @@ export function Hero() {
             <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
               <div className="flex justify-center mb-3">
                 <div className="icon-container">
-                  <PiStar className="icon-md" aria-hidden="true" />
+                  <Star className="icon-md" aria-hidden="true" />
                 </div>
               </div>
               <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</p>

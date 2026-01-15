@@ -3,12 +3,12 @@ import { services } from "@/lib/site-data"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { PiShoppingCart, PiLightbulb, PiHeadphones, PiCheck, PiArrowRight } from "react-icons/pi"
+import { ShoppingCart, Lightbulb, Headphones, Check, ArrowRight } from "lucide-react"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  "shopping-cart": PiShoppingCart,
-  lightbulb: PiLightbulb,
-  headphones: PiHeadphones,
+  "shopping-cart": ShoppingCart,
+  lightbulb: Lightbulb,
+  headphones: Headphones,
 }
 
 export function ServicesPreview() {
@@ -61,7 +61,7 @@ export function ServicesPreview() {
                   <ul className="space-y-2 mb-5 sm:mb-6">
                     {service.items.slice(0, 3).map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm">
-                        <PiCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-muted-foreground leading-relaxed">{item}</span>
                       </li>
                     ))}
@@ -74,7 +74,7 @@ export function ServicesPreview() {
                   >
                     <Link href="/contacto">
                       Hablar con un especialista
-                      <PiArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
                 </Card>

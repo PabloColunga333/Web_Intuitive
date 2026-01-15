@@ -4,15 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { PiArrowRight, PiMonitor, PiScan, PiShieldCheck, PiChartLine, PiBell, PiCode } from "react-icons/pi"
+import { ArrowRight, Monitor, Scan, ShieldCheck, TrendingUp, Bell, Code } from "lucide-react"
 
 const capabilityIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  "gerente-planta": PiMonitor,
-  "recopilacion-datos": PiScan,
-  unipoint: PiShieldCheck,
-  analytics: PiChartLine,
-  emf: PiBell,
-  webapi: PiCode,
+  "gerente-planta": Monitor,
+  "recopilacion-datos": Scan,
+  unipoint: ShieldCheck,
+  analytics: TrendingUp,
+  emf: Bell,
+  webapi: Code,
 }
 
 export function ExtendedCapabilities() {
@@ -65,7 +65,7 @@ export function ExtendedCapabilities() {
                         <Button asChild className="group w-full sm:w-auto h-11 sm:h-10">
                           <Link href="/contacto?tipo=demo" aria-label={`Solicitar evaluación de ${cap.title}`}>
                             <span>Solicitar evaluación</span>
-                            <PiArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                           </Link>
                         </Button>
                       </div>

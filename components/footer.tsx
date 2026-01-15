@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { PiLinkedinLogo, PiFacebookLogo, PiPhone, PiEnvelope, PiMapPin, PiClock, PiArrowUpRight } from "react-icons/pi"
+import { Linkedin, Facebook, Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
 
 export function Footer() {
@@ -44,7 +44,7 @@ export function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
                 aria-label="Visitar perfil de LinkedIn de Intuitive ERP"
               >
-                <PiLinkedinLogo className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
               </a>
               <a
                 href={siteConfig.social.facebook}
@@ -53,7 +53,7 @@ export function Footer() {
                 className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl glass flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all active:scale-95"
                 aria-label="Visitar página de Facebook de Intuitive ERP"
               >
-                <PiFacebookLogo className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
+                <Facebook className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -68,7 +68,7 @@ export function Footer() {
                     className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 group py-0.5"
                   >
                     {link.name}
-                    <PiArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -85,7 +85,7 @@ export function Footer() {
                     className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 group py-0.5"
                   >
                     {link.name}
-                    <PiArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
                   </Link>
                 </li>
               ))}
@@ -101,7 +101,7 @@ export function Footer() {
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5"
                   aria-label={`Llamar al teléfono ${siteConfig.contact.phone}`}
                 >
-                  <PiPhone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
                   <span>{siteConfig.contact.phone}</span>
                 </a>
               </li>
@@ -111,16 +111,16 @@ export function Footer() {
                   className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors group py-0.5 break-all"
                   aria-label={`Enviar correo a ${siteConfig.contact.email}`}
                 >
-                  <PiEnvelope className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" aria-hidden="true" />
                   <span>{siteConfig.contact.email}</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
-                <PiMapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                 <span>{siteConfig.contact.location}</span>
               </li>
               <li className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-muted-foreground">
-                <PiClock className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-primary flex-shrink-0" />
                 <div>
                   <span className="block">L-V: 9am - 6pm</span>
                   <span className="block text-[10px] sm:text-xs">Urgencias 24/7</span>
