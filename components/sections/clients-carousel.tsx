@@ -36,7 +36,6 @@ const clients: Client[] = [
 export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
-  const [isHovering, setIsHovering] = useState(false)
   const animationRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -54,7 +53,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
 
   useEffect(() => {
     const container = scrollContainerRef.current
-    if (!container || prefersReducedMotion || isHovering) return
+    if (!container || prefersReducedMotion) return
 
     // Esperar a que el contenido se renderice
     const timeoutId = setTimeout(() => {
@@ -83,7 +82,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [prefersReducedMotion, isHovering])
+  }, [prefersReducedMotion])
 
   return (
     <div className="relative">
@@ -111,8 +110,6 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         <div
           ref={scrollContainerRef}
           className="flex gap-3 sm:gap-6 lg:gap-8 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
           style={{
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
