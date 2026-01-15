@@ -21,15 +21,15 @@ const clients: Client[] = [
   { name: "Graphic Packaging", logo: "/logos/Graphic_Packaging_International_Logo.jpg" },
   { name: "Actia de Mexico", logo: "/logos/Logo_Group_Actia_2007.svg.png" },
   { name: "Grupo Polesa", logo: "/logos/polesa.png" },
-  { name: "Thor Químicos de México", logo: "/logos/filters_format(webp).webp" },
-  { name: "Ediciones Fiscales ISEF", logo: "/logos/filters_format(webp).webp" },
+  { name: "Thor Químicos de México", logo: "/logos/GBOX.png" },
+  { name: "Ediciones Fiscales ISEF", logo: "/logos/logo_Omex.webp" },
   { name: "Grupo Graficos San Juan", logo: "/logos/Grupo-Grafico-San-Juan.png" },
-  { name: "Bolsas y Plásticos Internacionales", logo: "/logos/filters_format(webp).webp" },
+  { name: "Bolsas y Plásticos Internacionales", logo: "/logos/LOGOTIPOS-HIKAM-03.webp" },
   { name: "Hikam Electric De Mexico", logo: "/logos/LOGOTIPOS-HIKAM-03.webp" },
   { name: "Woodcrafters Home Products", logo: "/logos/logo_WoodCrafters.png" },
-  { name: "GU Plumbing", logo: "/logos/filters_format(webp).webp" },
+  { name: "GU Plumbing", logo: "/logos/logo_Omex.webp" },
   { name: "OmexAlimentaria", logo: "/logos/logo_Omex.webp" },
-  { name: "Plásticos Arco Iris", logo: "/logos/filters_format(webp).webp" },
+  { name: "Plásticos Arco Iris", logo: "/logos/polesa.png" },
   { name: "GBOX", logo: "/logos/GBOX.png" },
 ]
 
@@ -55,21 +55,29 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
     const container = scrollContainerRef.current
     if (!container || prefersReducedMotion) return
 
-    let scrollPosition = 0
-    const containerWidth = container.scrollWidth / 2 // Ya que duplicamos el contenido
+    // Esperar a que el contenido se renderice
+    const timeoutId = setTimeout(() => {
+      const totalWidth = container.scrollWidth
+      const halfWidth = totalWidth / 2
 
-    const animate = () => {
-      scrollPosition += 1
-      if (scrollPosition >= containerWidth) {
-        scrollPosition = 0
+      let scrollPosition = 0
+      const speed = 1
+
+      const animate = () => {
+        scrollPosition += speed
+        // Reiniciar suavemente sin saltos
+        if (scrollPosition >= halfWidth) {
+          scrollPosition = 0
+        }
+        container.scrollLeft = scrollPosition
+        animationRef.current = requestAnimationFrame(animate)
       }
-      container.scrollLeft = scrollPosition
-      animationRef.current = requestAnimationFrame(animate)
-    }
 
-    animationRef.current = requestAnimationFrame(animate)
+      animationRef.current = requestAnimationFrame(animate)
+    }, 100)
 
     return () => {
+      clearTimeout(timeoutId)
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
@@ -101,7 +109,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
+          className="flex gap-2 sm:gap-4 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
           style={{
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
@@ -111,14 +119,14 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`original-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-24 sm:h-28 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={80}
                 height={40}
-                className="max-h-16 w-auto object-contain"
+                className="max-h-14 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
@@ -136,14 +144,14 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`duplicate-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-24 sm:h-28 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
                 width={80}
                 height={40}
-                className="max-h-16 w-auto object-contain"
+                className="max-h-14 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
