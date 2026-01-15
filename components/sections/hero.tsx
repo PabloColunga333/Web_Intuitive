@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, MessageCircle, TrendingUp, ShieldCheck, Star } from "lucide-react"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
 
 export function Hero() {
@@ -55,38 +55,6 @@ export function Hero() {
                 <span>Hablar por WhatsApp</span>
               </a>
             </Button>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-up animation-delay-400">
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
-              <div className="flex justify-center mb-3">
-                <div className="icon-container">
-                  <TrendingUp className="icon-md" aria-hidden="true" />
-                </div>
-              </div>
-              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Implementación probada</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Proceso con tiempo de entrega definido</p>
-            </div>
-
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5">
-              <div className="flex justify-center mb-3">
-                <div className="icon-container">
-                  <ShieldCheck className="icon-md" aria-hidden="true" />
-                </div>
-              </div>
-              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Visibilidad total</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Decisiones informadas en tiempo real</p>
-            </div>
-
-            <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl glass border border-primary/30 shadow-lg shadow-primary/10 text-center bg-gradient-to-br from-primary/5 to-accent/5 sm:col-span-2 md:col-span-1">
-              <div className="flex justify-center mb-3">
-                <div className="icon-container">
-                  <Star className="icon-md" aria-hidden="true" />
-                </div>
-              </div>
-              <p className="font-semibold text-sm sm:text-base mb-2 text-foreground">Soporte certificado</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Respaldado por SIEMENS</p>
-            </div>
           </div>
         </div>
       </div>
