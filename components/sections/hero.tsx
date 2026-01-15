@@ -8,8 +8,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden hero-mesh">
-      <div className="absolute inset-0 hero-grid-premium -z-10" />
-      <div className="absolute inset-0 hero-grid-overlay -z-9" />
+      {/* Grid sutil como ::before en CSS */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/8 via-transparent to-background -z-10" />
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/22 rounded-full blur-[128px] -z-10 animate-float-soft" />
       <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/18 rounded-full blur-[100px] -z-10 animate-float-soft" />
