@@ -11,10 +11,16 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
+  // Optimización adicional
+  productionBrowserSourceMaps: false,
+  
   // Optimizar compilación para navegadores modernos
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  
+  // Evitar transpilación innecesaria
+  transpilePackages: [],
   
   // Configuración de Turbopack para mejor rendimiento
   experimental: {

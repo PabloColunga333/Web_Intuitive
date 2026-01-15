@@ -84,6 +84,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `!function(){var e=document.documentElement.classList;e.remove('no-js'),e.add('js')}();`,
+          }}
+        />
       </head>
       <body className={`${manrope.className} font-sans antialiased`}>
         <ThemeProvider>

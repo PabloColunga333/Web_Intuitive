@@ -1,14 +1,20 @@
 # Cache para archivos estáticos de Next.js - Chunks JS
 /_next/static/chunks/*
   Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000, immutable
+  Cloudflare-CDN-Cache-Control: public, max-age=31536000
 
 # Cache para archivos CSS
 /_next/static/css/*
   Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000, immutable
+  Cloudflare-CDN-Cache-Control: public, max-age=31536000
 
 # Cache para media (fuentes, imágenes)
 /_next/static/media/*
   Cache-Control: public, max-age=31536000, immutable
+  CDN-Cache-Control: public, max-age=31536000, immutable
+  Cloudflare-CDN-Cache-Control: public, max-age=31536000
 
 # Cache para fuentes
 /fonts/*

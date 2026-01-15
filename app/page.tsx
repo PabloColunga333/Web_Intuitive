@@ -1,17 +1,26 @@
+import dynamic from "next/dynamic"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Hero } from "@/components/sections/hero"
 import { AboutERP } from "@/components/sections/about-erp"
 import { Features } from "@/components/sections/features"
-import { ExtendedCapabilities } from "@/components/sections/extended-capabilities"
 import { ServicesPreview } from "@/components/sections/services-preview"
-import { FAQ } from "@/components/sections/faq"
-import { ContactForm } from "@/components/contact-form"
 import { siteConfig } from "@/lib/site-data"
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+
+// Lazy load de componentes pesados
+const ExtendedCapabilities = dynamic(() => import("@/components/sections/extended-capabilities").then(mod => ({ default: mod.ExtendedCapabilities })), {
+  loading: () => <div className="py-20" />
+})
+const FAQ = dynamic(() => import("@/components/sections/faq").then(mod => ({ default: mod.FAQ })), {
+  loading: () => <div className="py-20" />
+})
+const ContactForm = dynamic(() => import("@/components/contact-form").then(mod => ({ default: mod.ContactForm })), {
+  loading: () => <div className="min-h-[400px] animate-pulse bg-secondary/20 rounded-lg" />
+})
 
 export default function HomePage() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`
