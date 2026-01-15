@@ -21,15 +21,10 @@ const clients: Client[] = [
   { name: "Graphic Packaging", logo: "/logos/Graphic_Packaging_International_Logo.jpg" },
   { name: "Actia de Mexico", logo: "/logos/Logo_Group_Actia_2007.svg.png" },
   { name: "Grupo Polesa", logo: "/logos/polesa.png" },
-  { name: "Thor Químicos de México", logo: "/logos/GBOX.png" },
-  { name: "Ediciones Fiscales ISEF", logo: "/logos/logo_Omex.webp" },
   { name: "Grupo Graficos San Juan", logo: "/logos/Grupo-Grafico-San-Juan.png" },
-  { name: "Bolsas y Plásticos Internacionales", logo: "/logos/LOGOTIPOS-HIKAM-03.webp" },
   { name: "Hikam Electric De Mexico", logo: "/logos/LOGOTIPOS-HIKAM-03.webp" },
   { name: "Woodcrafters Home Products", logo: "/logos/logo_WoodCrafters.png" },
-  { name: "GU Plumbing", logo: "/logos/logo_Omex.webp" },
   { name: "OmexAlimentaria", logo: "/logos/logo_Omex.webp" },
-  { name: "Plásticos Arco Iris", logo: "/logos/polesa.png" },
   { name: "GBOX", logo: "/logos/GBOX.png" },
 ]
 
