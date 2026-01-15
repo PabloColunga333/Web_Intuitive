@@ -3,6 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Hero } from "@/components/sections/hero"
+import { ClientsCarousel } from "@/components/sections/clients-carousel"
 import { AboutERP } from "@/components/sections/about-erp"
 import { Features } from "@/components/sections/features"
 import { ServicesPreview } from "@/components/sections/services-preview"
@@ -30,6 +31,17 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        
+        {/* Sección Carrusel de Clientes - Full Bleed Edge-to-Edge */}
+        <section className="relative py-16 sm:py-20 lg:py-24">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
+          
+          {/* Wrapper Full-Bleed */}
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-x-clip">
+            <ClientsCarousel showInfo={false} showTitle={true} />
+          </div>
+        </section>
+
         <AboutERP />
         <Features />
         <ExtendedCapabilities />

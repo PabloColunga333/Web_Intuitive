@@ -73,10 +73,10 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
 
   return (
     <div className="relative">
-      {/* Título con container normal (opcional) */}
+      {/* Título con container normal (centrado, max-width) */}
       {showTitle && (
-        <div className="container mx-auto px-4 mb-16">
-          <div className="max-w-7xl mx-auto text-center animate-fade-up">
+        <div className="container mx-auto px-4 mb-12 sm:mb-16">
+          <div className="max-w-5xl mx-auto text-center animate-fade-up">
             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
@@ -85,7 +85,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         </div>
       )}
 
-      {/* Carrusel Edge-to-Edge: sin padding lateral */}
+      {/* Carrusel Edge-to-Edge: track full-width sin padding lateral */}
       <div className="relative overflow-x-clip w-full">
         {/* Gradient overlay izquierda */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
