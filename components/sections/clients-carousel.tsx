@@ -17,8 +17,8 @@ interface Client {
 
 const clients: Client[] = [
   { name: "Mitsubishi Electric de México", logo: "/logos/Mitsubishi_Electric_logo.svg.png" },
-  { name: "Giesecke & Devrient", logo: "/logos/GD_Logo_GieseckeDevrientNeu.jpg" },
-  { name: "Graphic Packaging", logo: "/logos/Graphic_Packaging_International_Logo.jpg" },
+  { name: "Giesecke & Devrient", logo: "/logos/GD_Logo_GieseckeDevrientNeu.png" },
+  { name: "Graphic Packaging", logo: "/logos/Graphic_Packaging_International_Logo.png" },
   { name: "Actia de Mexico", logo: "/logos/Logo_Group_Actia_2007.svg.png" },
   { name: "Grupo Polesa", logo: "/logos/polesa.png" },
   { name: "Grupo Graficos San Juan", logo: "/logos/Grupo-Grafico-San-Juan.png" },
@@ -121,7 +121,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
                 alt={client.name}
                 width={140}
                 height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-125 saturate-125 opacity-95"
+                className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
@@ -146,7 +146,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
                 alt={client.name}
                 width={140}
                 height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-125 saturate-125 opacity-95"
+                className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
