@@ -25,7 +25,6 @@ const clients: Client[] = [
   { name: "Hikam Electric", logo: "/logos/LOGOTIPOS-HIKAM-03.webp" },
   { name: "Woodcrafters Home", logo: "/logos/logo_WoodCrafters.png" },
   { name: "Omex Alimentaria", logo: "/logos/logo_Omex.webp" },
-  { name: "GBOX", logo: "/logos/GBOX.png" },
   { name: "Loydeal", logo: "/logos/loydeal.avif" },
   { name: "Orbe", logo: "/logos/orbe_xx1.avif" },
   { name: "Orgullosamente Mexicano", logo: "/logos/orgullosamente-el-mexicano.svg" },
