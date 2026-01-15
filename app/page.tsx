@@ -6,7 +6,6 @@ import { Hero } from "@/components/sections/hero"
 import { AboutERP } from "@/components/sections/about-erp"
 import { Features } from "@/components/sections/features"
 import { ServicesPreview } from "@/components/sections/services-preview"
-import { ClientsCarousel } from "@/components/sections/clients-carousel"
 import { siteConfig } from "@/lib/site-data"
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
 import { Card } from "@/components/ui/card"
@@ -33,7 +32,6 @@ export default function HomePage() {
         <Hero />
         <AboutERP />
         <Features />
-        <ClientsCarousel />
         <ExtendedCapabilities />
         <ServicesPreview />
         <FAQ />

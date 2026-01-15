@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, MessageCircle } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
+import { ClientsCarousel } from "./clients-carousel"
 
 export function Hero() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`
@@ -56,6 +57,8 @@ export function Hero() {
               </a>
             </Button>
           </div>
+
+          <ClientsCarousel showInfo={false} />
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react"
 interface ClientsCarouselProps {
   title?: string
   autoPlaySpeed?: number
+  showInfo?: boolean
 }
 
 const clients = [
@@ -25,7 +26,7 @@ const clients = [
   "GBOX",
 ]
 
-export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25 }: ClientsCarouselProps) {
+export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
@@ -129,13 +130,15 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           </div>
 
           {/* Info texto */}
-          <div className="mt-12 text-center">
-            <p className="text-sm text-muted-foreground">
-              {prefersReducedMotion
-                ? "Usa el scroll para ver más empresas"
-                : "El carrusel se pausa al pasar el mouse (desktop) • Scroll disponible en móvil"}
-            </p>
-          </div>
+          {showInfo && (
+            <div className="mt-12 text-center">
+              <p className="text-sm text-muted-foreground">
+                {prefersReducedMotion
+                  ? "Usa el scroll para ver más empresas"
+                  : "El carrusel se pausa al pasar el mouse (desktop) • Scroll disponible en móvil"}
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
