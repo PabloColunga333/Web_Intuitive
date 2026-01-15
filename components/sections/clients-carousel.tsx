@@ -26,11 +26,17 @@ const clients: Client[] = [
   { name: "Woodcrafters Home Products", logo: "/logos/logo_WoodCrafters.png" },
   { name: "OmexAlimentaria", logo: "/logos/logo_Omex.webp" },
   { name: "GBOX", logo: "/logos/GBOX.png" },
+  { name: "Mitsubishi Electric", logo: "/logos/Mitsubishi_Electric_logo.svg.png" },
+  { name: "Giesecke Devrient", logo: "/logos/GD_Logo_GieseckeDevrientNeu.png" },
+  { name: "Graphic Packaging International", logo: "/logos/Graphic_Packaging_International_Logo.png" },
+  { name: "Actia", logo: "/logos/Logo_Group_Actia_2007.svg.png" },
+  { name: "Polesa", logo: "/logos/polesa.png" },
 ]
 
 export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  const [isHovering, setIsHovering] = useState(false)
   const animationRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -48,7 +54,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
 
   useEffect(() => {
     const container = scrollContainerRef.current
-    if (!container || prefersReducedMotion) return
+    if (!container || prefersReducedMotion || isHovering) return
 
     // Esperar a que el contenido se renderice
     const timeoutId = setTimeout(() => {
@@ -77,7 +83,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         cancelAnimationFrame(animationRef.current)
       }
     }
-  }, [prefersReducedMotion])
+  }, [prefersReducedMotion, isHovering])
 
   return (
     <div className="relative">
@@ -104,7 +110,9 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
         {/* Scroll Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-1.5 sm:gap-4 lg:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
+          className="flex gap-3 sm:gap-6 lg:gap-8 overflow-x-auto scroll-smooth pb-6 hide-scrollbar pl-4 sm:pl-6 lg:pl-8"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
           style={{
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
@@ -114,24 +122,27 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`original-${index}`}
-              className="flex-shrink-0 h-20 sm:h-28 lg:h-32 px-2.5 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-[80px] px-6 rounded-xl glass border border-border/50 shadow-sm bg-card/80 flex items-center justify-center transition-all duration-300 cursor-default group hover:shadow-md hover:border-primary/30"
+              aria-label={`Cliente: ${client.name}`}
             >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={140}
-                height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
-                onError={(e) => {
-                  const img = e.currentTarget as HTMLImageElement
-                  img.style.display = "none"
-                  const sibling = img.nextElementSibling as HTMLElement
-                  if (sibling) sibling.style.display = "block"
-                }}
-              />
-              <span className="hidden font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs text-center">
-                {client.name}
-              </span>
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={client.logo}
+                  alt={`Logo de ${client.name}`}
+                  width={120}
+                  height={60}
+                  className="h-[64px] w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement
+                    img.style.display = "none"
+                    const sibling = img.nextElementSibling as HTMLElement
+                    if (sibling) sibling.style.display = "flex"
+                  }}
+                />
+                <span className="hidden absolute inset-0 items-center justify-center font-medium text-sm text-foreground/80 text-center px-4">
+                  {client.name}
+                </span>
+              </div>
             </div>
           ))}
 
@@ -139,24 +150,27 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`duplicate-${index}`}
-              className="flex-shrink-0 h-20 sm:h-28 lg:h-32 px-2.5 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-[80px] px-6 rounded-xl glass border border-border/50 shadow-sm bg-card/80 flex items-center justify-center transition-all duration-300 cursor-default group hover:shadow-md hover:border-primary/30"
+              aria-label={`Cliente: ${client.name}`}
             >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={140}
-                height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
-                onError={(e) => {
-                  const img = e.currentTarget as HTMLImageElement
-                  img.style.display = "none"
-                  const sibling = img.nextElementSibling as HTMLElement
-                  if (sibling) sibling.style.display = "block"
-                }}
-              />
-              <span className="hidden font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs text-center">
-                {client.name}
-              </span>
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={client.logo}
+                  alt={`Logo de ${client.name}`}
+                  width={120}
+                  height={60}
+                  className="h-[64px] w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement
+                    img.style.display = "none"
+                    const sibling = img.nextElementSibling as HTMLElement
+                    if (sibling) sibling.style.display = "flex"
+                  }}
+                />
+                <span className="hidden absolute inset-0 items-center justify-center font-medium text-sm text-foreground/80 text-center px-4">
+                  {client.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>
