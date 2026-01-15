@@ -86,64 +86,66 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
               </p>
             </div>
           )}
-
-          {/* Carrusel */}
-          <div className="relative overflow-hidden">
-            {/* Gradient overlay izquierda */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-
-            {/* Gradient overlay derecha */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
-            {/* Scroll Container */}
-            <div
-              ref={scrollContainerRef}
-              className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar"
-              style={{
-                scrollBehavior: "auto",
-                WebkitOverflowScrolling: "touch",
-              }}
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              {/* Contenido original */}
-              {clients.map((client, index) => (
-                <div
-                  key={`original-${index}`}
-                  className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
-                >
-                  <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
-                    {client}
-                  </p>
-                </div>
-              ))}
-
-              {/* Contenido duplicado para loop infinito */}
-              {clients.map((client, index) => (
-                <div
-                  key={`duplicate-${index}`}
-                  className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
-                >
-                  <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
-                    {client}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Info texto */}
-          {showInfo && (
-            <div className="mt-12 text-center">
-              <p className="text-sm text-muted-foreground">
-                {prefersReducedMotion
-                  ? "Usa el scroll para ver más empresas"
-                  : "El carrusel se pausa al pasar el mouse (desktop) • Scroll disponible en móvil"}
-              </p>
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Carrusel Full Width */}
+      <div className="relative overflow-hidden w-full">
+        {/* Gradient overlay izquierda */}
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+
+        {/* Gradient overlay derecha */}
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+
+        {/* Scroll Container */}
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar px-4 sm:px-12 lg:px-16"
+          style={{
+            scrollBehavior: "auto",
+            WebkitOverflowScrolling: "touch",
+          }}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          {/* Contenido original */}
+          {clients.map((client, index) => (
+            <div
+              key={`original-${index}`}
+              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+            >
+              <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
+                {client}
+              </p>
+            </div>
+          ))}
+
+          {/* Contenido duplicado para loop infinito */}
+          {clients.map((client, index) => (
+            <div
+              key={`duplicate-${index}`}
+              className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center text-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+            >
+              <p className="font-medium text-sm sm:text-base text-foreground leading-tight max-w-xs">
+                {client}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Info texto */}
+      {showInfo && (
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto mt-12 text-center">
+            <p className="text-sm text-muted-foreground">
+              {prefersReducedMotion
+                ? "Usa el scroll para ver más empresas"
+                : "El carrusel se pausa al pasar el mouse (desktop) • Scroll disponible en móvil"}
+            </p>
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
         .hide-scrollbar {
