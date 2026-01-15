@@ -121,7 +121,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
                 alt={client.name}
                 width={140}
                 height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-110"
+                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-125 saturate-125 opacity-95"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
@@ -146,7 +146,7 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
                 alt={client.name}
                 width={140}
                 height={70}
-                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-110"
+                className="h-10 sm:h-14 lg:h-16 w-auto object-contain mix-blend-multiply dark:mix-blend-screen brightness-105 contrast-125 saturate-125 opacity-95"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
