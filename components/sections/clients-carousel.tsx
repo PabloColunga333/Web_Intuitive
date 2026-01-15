@@ -6,6 +6,7 @@ interface ClientsCarouselProps {
   title?: string
   autoPlaySpeed?: number
   showInfo?: boolean
+  showTitle?: boolean
 }
 
 const clients = [
@@ -26,7 +27,7 @@ const clients = [
   "GBOX",
 ]
 
-export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true }: ClientsCarouselProps) {
+export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
@@ -77,12 +78,14 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Título */}
-          <div className="text-center mb-16 animate-fade-up">
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
-            </p>
-          </div>
+          {showTitle && (
+            <div className="text-center mb-16 animate-fade-up">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
+              </p>
+            </div>
+          )}
 
           {/* Carrusel */}
           <div className="relative overflow-hidden">

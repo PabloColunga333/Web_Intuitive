@@ -58,7 +58,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <ClientsCarousel showInfo={false} />
+          <ClientsCarousel showInfo={false} showTitle={false} />
         </div>
       </div>
     </section>
