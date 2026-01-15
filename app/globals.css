@@ -244,11 +244,53 @@ html {
 }
 
 .background-canvas {
-  background-color: oklch(0.98 0.001 120);
+  background-color: var(--background);
 }
 
-.background-canvas.dark {
-  background-color: oklch(0.12 0.01 250);
+/* Sección base: fondo blanco/limpio */
+.section-base {
+  background-color: transparent;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-base {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Sección alternada: fondo suave para contraste */
+.section-alt {
+  background-color: oklch(0.96 0.005 220 / 0.5);
+  border-top: 1px solid oklch(0.88 0.01 220 / 0.3);
+  border-bottom: 1px solid oklch(0.88 0.01 220 / 0.3);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-alt {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.dark .section-alt {
+  background-color: oklch(0.15 0.01 250 / 0.4);
+  border-top-color: oklch(0.22 0.02 250 / 0.4);
+  border-bottom-color: oklch(0.22 0.02 250 / 0.4);
+}
+
+/* Divisor sutil entre secciones */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, oklch(0.88 0.01 220 / 0.4) 50%, transparent);
+}
+
+.dark .section-divider {
+  background: linear-gradient(to right, transparent, oklch(0.24 0.02 250 / 0.4) 50%, transparent);
 }
 
 .hero-mesh {
