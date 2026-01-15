@@ -114,14 +114,14 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`original-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-28 sm:h-32 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={80}
-                height={40}
-                className="max-h-14 w-auto object-contain"
+                width={112}
+                height={56}
+                className="max-h-20 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
@@ -139,14 +139,14 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
           {clients.map((client, index) => (
             <div
               key={`duplicate-${index}`}
-              className="flex-shrink-0 h-24 sm:h-28 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
+              className="flex-shrink-0 h-28 sm:h-32 px-3 sm:px-4 rounded-xl sm:rounded-2xl glass border border-border/50 shadow-sm shadow-primary/5 bg-gradient-to-br from-card/50 to-primary/5 flex items-center justify-center hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default min-w-max"
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={80}
-                height={40}
-                className="max-h-14 w-auto object-contain"
+                width={112}
+                height={56}
+                className="max-h-20 w-auto object-contain"
                 onError={(e) => {
                   const img = e.currentTarget as HTMLImageElement
                   img.style.display = "none"
