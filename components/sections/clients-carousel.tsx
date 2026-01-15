@@ -16,21 +16,21 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "Mitsubishi Electric de México", logo: "https://logo.clearbit.com/mitsubishielectric.com" },
-  { name: "Giesecke & Devrient", logo: "https://logo.clearbit.com/gi-de.com" },
-  { name: "Graphic Packaging", logo: "https://logo.clearbit.com/graphicpkg.com" },
-  { name: "Actia de Mexico", logo: "https://logo.clearbit.com/actia.es" },
-  { name: "Grupo Polesa", logo: "https://logo.clearbit.com/polesa.com.mx" },
-  { name: "Thor Químicos de México", logo: "https://logo.clearbit.com/thorquimicos.com.mx" },
-  { name: "Ediciones Fiscales ISEF", logo: "https://logo.clearbit.com/edicionesfiscales.com.mx" },
-  { name: "Grupo Graficos San Juan", logo: "https://logo.clearbit.com/ggsa.com.mx" },
-  { name: "Bolsas y Plásticos Internacionales", logo: "https://logo.clearbit.com/bolsasyplasticos.com" },
-  { name: "Hikam Electric De Mexico", logo: "https://logo.clearbit.com/hikam.com.mx" },
-  { name: "Woodcrafters Home Products", logo: "https://logo.clearbit.com/woodcrafters.com" },
-  { name: "GU Plumbing", logo: "https://logo.clearbit.com/guplumbing.com" },
-  { name: "OmexAlimentaria", logo: "https://logo.clearbit.com/omexalimentaria.com" },
-  { name: "Plásticos Arco Iris", logo: "https://logo.clearbit.com/plasticosarcoiris.com.mx" },
-  { name: "GBOX", logo: "https://logo.clearbit.com/gbox.com.mx" },
+  { name: "Mitsubishi Electric de México", logo: "/logos/Mitsubishi_Electric_logo.svg.png" },
+  { name: "Giesecke & Devrient", logo: "/logos/GD_Logo_GieseckeDevrientNeu.jpg" },
+  { name: "Graphic Packaging", logo: "/logos/Graphic_Packaging_International_Logo.jpg" },
+  { name: "Actia de Mexico", logo: "/logos/Logo_Group_Actia_2007.svg.png" },
+  { name: "Grupo Polesa", logo: "/logos/polesa.png" },
+  { name: "Thor Químicos de México", logo: "/logos/Gemini_Generated_Image_dkyli9dkyli9dkyl.png" },
+  { name: "Ediciones Fiscales ISEF", logo: "/logos/Gemini_Generated_Image_dkyli9dkyli9dkyl (1).png" },
+  { name: "Grupo Graficos San Juan", logo: "/logos/Grupo-Grafico-San-Juan.png" },
+  { name: "Bolsas y Plásticos Internacionales", logo: "/logos/Gemini_Generated_Image_gi8m1jgi8m1jgi8m.png" },
+  { name: "Hikam Electric De Mexico", logo: "/logos/Gemini_Generated_Image_lc0h0alc0h0alc0h.png" },
+  { name: "Woodcrafters Home Products", logo: "/logos/logo_WoodCrafters.png" },
+  { name: "GU Plumbing", logo: "/logos/Gemini_Generated_Image_mo8qtsmo8qtsmo8q.png" },
+  { name: "OmexAlimentaria", logo: "/logos/OIG2.jpg" },
+  { name: "Plásticos Arco Iris", logo: "/logos/Gemini_Generated_Image_dkyli9dkyli9dkyl (2).png" },
+  { name: "GBOX", logo: "/logos/GBOX.png" },
 ]
 
 export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
