@@ -86,18 +86,19 @@ export function Hero() {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-foreground/70">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>100% mexicanos</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-foreground/70">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                     <span>Soporte 24/7</span>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up animation-delay-300">
-                  <Button asChild size="lg" className="text-base h-14 px-8 glow-primary font-semibold">
-                    <Link href="/contacto" className="flex items-center gap-2" aria-label="Solicitar demostración gratuita del producto">
-                      <span>Solicitar demo gratuita</span>
+                {/* CTAs */}
+                <div className="flex flex-wrap items-center gap-4 pt-2 animate-fade-up animation-delay-300">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="text-base h-14 px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg glow-primary"
+                  >
+                    <Link href="/servicios">
+                      Ver servicios
                       <ArrowRight className="w-5 h-5" aria-hidden="true" />
                     </Link>
                   </Button>

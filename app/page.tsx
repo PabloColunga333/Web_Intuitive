@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4 mb-8 sm:mb-10">
             <div className="text-center">
               <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary mb-3">Empresas que confían en nosotros</span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">+50 implementaciones exitosas en México</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">+50 implementaciones exitosas</h2>
             </div>
           </div>
           {/* Wrapper Full-Bleed */}
