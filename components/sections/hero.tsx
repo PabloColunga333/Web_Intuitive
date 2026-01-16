@@ -61,7 +61,6 @@ export function Hero() {
               <div className="space-y-6 sm:space-y-8">
                 <div className="flex justify-start animate-fade-up">
                   <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-primary/10 border border-primary/25 text-sm font-semibold text-primary shadow-sm">
-                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <span>Software integrado de manufactura ERP/MRP</span>
                   </div>
                 </div>
@@ -77,18 +76,6 @@ export function Hero() {
                   CRM, trazabilidad, calidad e ingeniería integrados. Arquitectura basada en Microsoft para visibilidad
                   completa de tu operación.
                 </p>
-
-                {/* Indicadores de credibilidad */}
-                <div className="flex flex-wrap items-center gap-6 pt-2 animate-fade-up animation-delay-200">
-                  <div className="flex items-center gap-2 text-sm text-foreground/70">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>+50 implementaciones</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-foreground/70">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span>Soporte 24/7</span>
-                  </div>
-                </div>
 
                 {/* CTAs */}
                 <div className="flex flex-wrap items-center gap-4 pt-2 animate-fade-up animation-delay-300">
@@ -125,16 +112,6 @@ export function Hero() {
 
             {/* Lado derecho - espacio visual para la imagen de fondo */}
             <div className="hidden lg:block" aria-hidden="true" />
-          </div>
-        </div>
-      </div>
-
-      {/* Indicador de scroll */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-up animation-delay-400">
-        <div className="flex flex-col items-center gap-2 text-foreground/50">
-          <span className="text-xs uppercase tracking-widest">Descubre más</span>
-          <div className="w-6 h-10 rounded-full border-2 border-current p-1 opacity-60">
-            <div className="w-1.5 h-1.5 bg-current rounded-full mx-auto animate-bounce" />
           </div>
         </div>
       </div>
