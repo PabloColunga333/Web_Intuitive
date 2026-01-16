@@ -32,7 +32,7 @@ const clients: Client[] = [
   { name: "Tecno Agrax", logo: "/logos/tecno-agrax.avif" },
 ]
 
-export function ClientsCarousel({ title = "Empresas con las que hemos trabajado", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
+export function ClientsCarousel({ title = "Empresas que confían en nosotros", autoPlaySpeed = 25, showInfo = true, showTitle = true }: ClientsCarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const animationRef = useRef<number | null>(null)
@@ -87,11 +87,11 @@ export function ClientsCarousel({ title = "Empresas con las que hemos trabajado"
     <div className="relative">
       {/* Título con container normal (centrado, max-width) */}
       {showTitle && (
-        <div className="container mx-auto px-4 mb-12 sm:mb-16">
+        <div className="container mx-auto px-4 mb-10 sm:mb-14">
           <div className="max-w-5xl mx-auto text-center animate-fade-up">
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">{title}</h2>
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-3">{title}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Empresas líderes que confían en Intuitive ERP para optimizar sus procesos de manufactura
+              Marcas que han trabajado con Intuitive ERP en proyectos de implementacion y mejora operativa
             </p>
           </div>
         </div>

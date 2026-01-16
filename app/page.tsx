@@ -33,10 +33,10 @@ export default function HomePage() {
         <Hero />
         
         {/* Sección Carrusel de Clientes - Full Bleed Edge-to-Edge */}
-        <section className="section-alt py-12 sm:py-16">
+        <section className="section-alt py-10 sm:py-14">
           {/* Wrapper Full-Bleed */}
           <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-x-clip">
-            <ClientsCarousel showInfo={false} showTitle={false} />
+            <ClientsCarousel showInfo={false} />
           </div>
         </section>
 
@@ -60,13 +60,13 @@ export default function HomePage() {
           <FAQ />
         </div>
 
-        <section className="py-24 relative">
+        <section className="py-16 md:py-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
 
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto section-shell p-10 md:p-12">
+            <div className="max-w-5xl mx-auto section-shell p-8 md:p-10">
               {/* Header con gancho */}
-              <div className="text-center mb-12">
+              <div className="text-center mb-10">
                 <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">Hablemos de tu operación</h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                   Cuéntanos cómo es tu proceso de manufactura y te orientamos al paquete ideal. Análisis completamente

@@ -250,14 +250,14 @@ html {
 /* Sección base: fondo blanco/limpio */
 .section-base {
   background-color: transparent;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 @media (min-width: 768px) {
   .section-base {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
@@ -266,14 +266,14 @@ html {
   background-color: oklch(0.96 0.005 220 / 0.5);
   border-top: 1px solid oklch(0.88 0.01 220 / 0.3);
   border-bottom: 1px solid oklch(0.88 0.01 220 / 0.3);
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 @media (min-width: 768px) {
   .section-alt {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
 
