@@ -10,7 +10,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Soporte Técnico | Intuitive ERP",
-  description: "Soporte técnico certificado por SIEMENS. Horario de 9 am a 6 pm (L-V) y urgencias 24/7 vía telefónica.",
+  description: "Soporte técnico especializado certificado. Horario de 9 am a 6 pm (L-V) y urgencias 24/7 vía telefónica.",
 }
 
 export default function SoporteTecnicoPage() {
@@ -24,7 +24,7 @@ export default function SoporteTecnicoPage() {
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">Soporte técnico</h1>
               <p className="text-xl text-muted-foreground">
-                Certificado por SIEMENS. Respaldo profesional cuando lo necesites.
+                Soporte especializado certificado. Respaldo profesional cuando lo necesites.
               </p>
             </div>
           </div>
@@ -62,9 +62,9 @@ export default function SoporteTecnicoPage() {
                     <Award className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-grow">
-                    <h2 className="text-2xl font-bold mb-3">Certificado por SIEMENS</h2>
+                    <h2 className="text-2xl font-bold mb-3">Certificación especializada</h2>
                     <p className="text-lg leading-relaxed">
-                      Nuestro equipo técnico cuenta con certificación oficial de SIEMENS, garantizando soporte
+                      Nuestro equipo técnico cuenta con certificación oficial especializada, garantizando soporte
                       profesional y actualizado con los más altos estándares de la industria.
                     </p>
                   </div>

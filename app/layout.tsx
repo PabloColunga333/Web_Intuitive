@@ -19,14 +19,14 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Intuitive ERP | Planeación y Control de Manufactura en Tiempo Real",
   description:
-    "Software integrado de manufactura ERP/MRP. Planeación, control de producción, trazabilidad, calidad e ingeniería. Arquitectura Microsoft. Soporte certificado SIEMENS.",
+    "Software integrado de manufactura ERP/MRP. Planeación, control de producción, trazabilidad, calidad e ingeniería. Arquitectura Microsoft. Soporte especializado certificado.",
   generator: "v0.app",
   keywords: [
     "ERP",
     "MRP",
     "manufactura",
     "software industrial",
-    "Siemens",
+    "MOM",
     "Querétaro",
     "México",
     "producción",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Intuitive ERP | Planeación y Control de Manufactura en Tiempo Real",
-    description: "Software integrado de manufactura ERP/MRP con CRM, trazabilidad y soporte certificado SIEMENS.",
+    description: "Software integrado de manufactura ERP/MRP con CRM, trazabilidad y soporte especializado certificado.",
     type: "website",
     locale: "es_MX",
     siteName: "Intuitive ERP",

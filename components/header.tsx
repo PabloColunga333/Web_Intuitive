@@ -32,14 +32,16 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "glass shadow-lg shadow-background/50" : "bg-background/80 backdrop-blur-sm"
+        isScrolled 
+          ? "glass shadow-lg shadow-background/10 border-b border-border/50" 
+          : "bg-background/60 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 lg:h-18 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             
-            <div className="font-semibold text-lg">
+            <div className="font-semibold text-lg lg:text-xl">
               <span className="text-primary">Intuitive</span>
               <span className="text-foreground ml-1">ERP</span>
             </div>
@@ -63,23 +65,23 @@ export function Header() {
               asChild
               variant="ghost"
               size="sm"
-              className="text-[#25D366] hover:text-[#25D366] hover:bg-[#25D366]/10"
+              className="text-[#25D366] hover:text-[#25D366] hover:bg-[#25D366]/10 font-medium"
             >
               <a 
                 href={whatsappLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="flex items-center gap-1"
+                className="flex items-center gap-1.5"
                 aria-label="Contactar por WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 <span>WhatsApp</span>
               </a>
             </Button>
-            <Button asChild size="sm" className="glow-primary">
-              <Link href="/contacto" aria-label="Solicitar demostración del producto">
+            <Button asChild size="sm" className="glow-primary font-semibold">
+              <Link href="/contacto" aria-label="Solicitar demostración del producto" className="flex items-center gap-1.5">
                 <span>Solicitar demo</span>
-                <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </Button>
           </div>
@@ -109,7 +111,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4 mt-2 border-t border-border/50">
-                <Button asChild variant="outline" size="default" className="justify-center bg-transparent min-h-[44px]">
+                <Button asChild variant="outline" size="default" className="justify-center bg-transparent min-h-[44px] font-medium">
                   <a 
                     href={whatsappLink} 
                     target="_blank" 
@@ -120,7 +122,7 @@ export function Header() {
                     <span>WhatsApp</span>
                   </a>
                 </Button>
-                <Button asChild size="default" className="justify-center min-h-[44px]">
+                <Button asChild size="default" className="justify-center min-h-[44px] font-semibold">
                   <Link 
                     href="/contacto" 
                     onClick={() => setIsOpen(false)}

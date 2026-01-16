@@ -128,7 +128,7 @@ export const services = [
     title: "Venta",
     icon: "shopping-cart",
     description:
-      "Presentaciones conceptuales de soluciones MOM de SIEMENS. Diagnóstico de requerimientos y propuestas personalizadas.",
+      "Presentaciones conceptuales de soluciones MOM empresariales. Diagnóstico de requerimientos y propuestas personalizadas.",
     items: ["Presentaciones conceptuales", "Diagnóstico de requerimientos", "Propuestas y negociación"],
   },
   {
@@ -136,9 +136,9 @@ export const services = [
     title: "Consultoría",
     icon: "lightbulb",
     description:
-      "Soluciones MOM de SIEMENS, automatización industrial, Business Intelligence y alineación de procesos.",
+      "Soluciones MOM empresariales, automatización industrial, Business Intelligence y alineación de procesos.",
     items: [
-      "Soluciones MOM de SIEMENS",
+      "Soluciones MOM empresariales",
       "Automatización, control y redes industriales",
       "Business Intelligence y Manufacturing Intelligence",
       "Alineación de procesos y KPI's",
@@ -150,9 +150,9 @@ export const services = [
     title: "Soporte Técnico",
     icon: "headphones",
     description:
-      "Certificado por SIEMENS. Horario de 9 am a 6 pm (L-V) excepto festivos y última semana del año. Urgencias 24/7 vía telefónica.",
+      "Soporte técnico certificado. Horario de 9 am a 6 pm (L-V) excepto festivos y última semana del año. Urgencias 24/7 vía telefónica.",
     items: [
-      "Certificado por SIEMENS",
+      "Soporte especializado certificado",
       "Horario: 9 am - 6 pm (L-V)",
       "Urgencias 24/7 vía telefónica",
       "Excepto festivos y última semana del año",

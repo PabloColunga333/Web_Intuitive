@@ -9,7 +9,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Nosotros | Intuitive ERP",
   description:
-    "Especialistas en venta, implementación y soporte técnico de sistemas de manufactura con soluciones MOM de SIEMENS.",
+    "Especialistas en venta, implementación y soporte técnico de sistemas de manufactura con soluciones MOM empresariales.",
 }
 
 export default function NosotrosPage() {
@@ -45,7 +45,7 @@ export default function NosotrosPage() {
                         cualquier sector de manufactura.
                       </p>
                       <p>
-                        Trabajamos con soluciones MOM de SIEMENS y ofrecemos servicios integrales que incluyen
+                        Trabajamos con soluciones MOM empresariales y ofrecemos servicios integrales que incluyen
                         automatización industrial, Business Intelligence, Manufacturing Intelligence y consultoría en
                         metodologías como Lean Manufacturing y Six Sigma.
                       </p>

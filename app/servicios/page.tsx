@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Servicios | Intuitive ERP – Venta, Consultoría y Soporte Técnico",
   description:
-    "Venta, consultoría y soporte técnico certificado por SIEMENS para sistemas de manufactura ERP/MRP. Paquetes personalizables.",
+    "Venta, consultoría y soporte técnico especializado certificado para sistemas de manufactura ERP/MRP. Paquetes personalizables.",
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
