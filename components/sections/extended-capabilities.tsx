@@ -40,7 +40,7 @@ export function ExtendedCapabilities() {
                     <TabsTrigger
                       key={cap.id}
                       value={cap.id}
-                      className="px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm rounded-lg sm:rounded-xl whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-medium data-[state=inactive]:glass data-[state=inactive]:text-foreground data-[state=inactive]:hover:bg-secondary/50 transition-all"
+                      className="px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm rounded-lg sm:rounded-xl whitespace-nowrap data-[state=active]:bg-primary data-[state=active]:text-primary-foreground font-medium data-[state=inactive]:bg-secondary/80 data-[state=inactive]:text-foreground data-[state=inactive]:border data-[state=inactive]:border-border data-[state=inactive]:hover:bg-secondary transition-all"
                       aria-label={`Ver capacidad: ${cap.title}`}
                     >
                       <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" aria-hidden="true" />
@@ -55,7 +55,7 @@ export function ExtendedCapabilities() {
               const Icon = capabilityIcons[cap.id]
               return (
                 <TabsContent key={cap.id} value={cap.id}>
-                  <Card className="p-6 sm:p-8 lg:p-12 glass border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg shadow-primary/10">
+                  <Card className="p-6 sm:p-8 lg:p-12 bg-card border border-primary/25 shadow-xl shadow-primary/10">
                     <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start justify-between">
                       <div className="flex-1">
                         <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{cap.title}</h3>

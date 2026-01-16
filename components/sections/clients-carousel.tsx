@@ -108,7 +108,7 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
           {clients.concat(clients).map((client, index) => (
             <div
               key={`${client.name}-${index}`}
-              className="flex-shrink-0 h-20 sm:h-24 px-8 sm:px-10 rounded-2xl glass border border-border/60 shadow-sm flex items-center justify-center transition-all duration-500 cursor-default group hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
+              className="flex-shrink-0 h-20 sm:h-24 px-8 sm:px-10 rounded-2xl bg-card border border-border shadow-sm flex items-center justify-center transition-all duration-500 cursor-default group hover:shadow-xl hover:border-primary/40 hover:-translate-y-1.5 hover:bg-card/95"
               aria-label={`Cliente: ${client.name}`}
             >
               <div className="relative w-full h-full flex items-center justify-center">
@@ -117,7 +117,7 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
                   alt={`Logo de ${client.name}`}
                   width={140}
                   height={70}
-                  className="h-14 sm:h-16 w-auto object-contain grayscale opacity-65 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                  className="h-14 sm:h-16 w-auto object-contain grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                   onError={(e) => {
                     const img = e.currentTarget as HTMLImageElement
                     img.style.display = "none"

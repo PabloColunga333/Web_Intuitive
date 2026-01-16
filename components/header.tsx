@@ -33,8 +33,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
-          ? "glass shadow-lg shadow-background/10 border-b border-border/50" 
-          : "bg-background/60 backdrop-blur-md"
+          ? "bg-background/95 backdrop-blur-xl shadow-lg shadow-foreground/5 border-b border-border" 
+          : "bg-background/80 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">

@@ -135,11 +135,13 @@ export function Features() {
                       key={feature.id}
                       data-card
                       style={maxHeight ? { height: `${maxHeight}px` } : {}}
-                      className="p-5 sm:p-6 glass border-border/50 group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer active:scale-[0.98] flex flex-col"
+                      className="p-5 sm:p-6 bg-card border border-border shadow-sm group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer active:scale-[0.98] flex flex-col"
                       onClick={() => setSelectedFeature(feature)}
                     >
                       <div className="flex items-center justify-center mb-4 sm:mb-5">
-                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                        </div>
                       </div>
 
                       <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
@@ -149,7 +151,7 @@ export function Features() {
                       <ul className="space-y-2 mb-4 flex-grow">
                         {bullets.map((bullet, idx) => (
                           <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
-                            <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                             {bullet}
                           </li>
                         ))}

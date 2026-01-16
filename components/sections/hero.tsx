@@ -8,10 +8,11 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[90vh] md:min-h-[95vh] flex items-center overflow-hidden hero-mesh">
-      {/* Grid sutil como ::before en CSS */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/6 via-transparent to-background -z-10" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/18 rounded-full blur-[140px] -z-10 animate-float-soft" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-accent/15 rounded-full blur-[110px] -z-10 animate-float-soft" />
+      {/* Fondos con más presencia */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-background -z-10" />
+      <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-primary/25 rounded-full blur-[160px] -z-10 animate-float-soft" />
+      <div className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[130px] -z-10 animate-float-soft" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/8 to-transparent rounded-full blur-[100px] -z-10" />
 
       <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-28">
         <div className="max-w-7xl mx-auto">
@@ -19,14 +20,15 @@ export function Hero() {
             {/* Contenido principal */}
             <div className="space-y-8">
               <div className="flex justify-start mb-6 animate-fade-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium text-muted-foreground border border-border/50">
+                <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary/10 border border-primary/25 text-sm font-semibold text-primary shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span>Software integrado de manufactura ERP/MRP</span>
                 </div>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-balance animate-fade-up animation-delay-100 leading-[1.1]">
                 Planeación y control de producción{" "}
-                <span className="text-primary bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                <span className="text-primary">
                   en tiempo real
                 </span>
               </h1>
@@ -63,55 +65,55 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Panel visual abstracto (enterprise) */}
+            {/* Panel visual abstracto (enterprise) - con más contraste */}
             <div className="hidden lg:block relative animate-fade-up animation-delay-400">
               <div className="relative aspect-square max-w-xl mx-auto">
                 {/* Card principal con efecto dashboard */}
-                <div className="absolute inset-0 glass rounded-2xl border border-border/50 p-8 shadow-2xl shadow-primary/10">
+                <div className="absolute inset-0 glass rounded-2xl border border-border p-8 shadow-2xl">
                   {/* Header simulado */}
                   <div className="flex items-center justify-between mb-8">
                     <div className="space-y-2">
-                      <div className="h-3 w-32 bg-gradient-to-r from-primary/60 to-primary/30 rounded-full" />
-                      <div className="h-2 w-24 bg-muted rounded-full" />
+                      <div className="h-3.5 w-36 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
+                      <div className="h-2.5 w-28 bg-muted-foreground/20 rounded-full" />
                     </div>
                     <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-primary/20" />
-                      <div className="w-8 h-8 rounded-lg bg-accent/20" />
+                      <div className="w-9 h-9 rounded-lg bg-primary/25 border border-primary/30" />
+                      <div className="w-9 h-9 rounded-lg bg-accent/25 border border-accent/30" />
                     </div>
                   </div>
 
                   {/* Métricas simuladas */}
                   <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-                      <div className="h-2 w-16 bg-muted/50 rounded-full mb-3" />
-                      <div className="h-6 w-20 bg-gradient-to-r from-primary to-primary/70 rounded-lg" />
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/30">
+                      <div className="h-2.5 w-16 bg-foreground/15 rounded-full mb-3" />
+                      <div className="h-7 w-24 bg-gradient-to-r from-primary to-primary/60 rounded-lg" />
                     </div>
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
-                      <div className="h-2 w-16 bg-muted/50 rounded-full mb-3" />
-                      <div className="h-6 w-20 bg-gradient-to-r from-accent to-accent/70 rounded-lg" />
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30">
+                      <div className="h-2.5 w-16 bg-foreground/15 rounded-full mb-3" />
+                      <div className="h-7 w-24 bg-gradient-to-r from-accent to-accent/60 rounded-lg" />
                     </div>
                   </div>
 
                   {/* Gráfico simulado */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-end gap-2 h-32">
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[45%]" />
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[70%]" />
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[55%]" />
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[85%]" />
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[65%]" />
-                      <div className="flex-1 bg-gradient-to-t from-primary/40 to-primary/20 rounded-t-lg h-[90%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[45%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[70%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[55%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[85%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[65%]" />
+                      <div className="flex-1 bg-gradient-to-t from-primary/50 to-primary/25 rounded-t-lg h-[90%]" />
                     </div>
                   </div>
 
                   {/* Elementos de lista */}
                   <div className="space-y-3">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-muted/20">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/30 to-primary/10" />
+                      <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-secondary/60 border border-border/50">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/40 to-primary/15 border border-primary/25" />
                         <div className="flex-1 space-y-2">
-                          <div className="h-2 w-3/4 bg-muted/50 rounded-full" />
-                          <div className="h-2 w-1/2 bg-muted/30 rounded-full" />
+                          <div className="h-2.5 w-3/4 bg-foreground/15 rounded-full" />
+                          <div className="h-2 w-1/2 bg-foreground/10 rounded-full" />
                         </div>
                       </div>
                     ))}
@@ -119,19 +121,20 @@ export function Hero() {
                 </div>
 
                 {/* Elementos flotantes decorativos */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 rounded-2xl glass border border-border/50 p-4 shadow-xl">
-                  <div className="w-full h-full rounded-lg bg-gradient-to-br from-accent/40 to-accent/20" />
+                <div className="absolute -top-6 -right-6 w-28 h-28 rounded-2xl glass border border-border p-4 shadow-xl">
+                  <div className="w-full h-full rounded-lg bg-gradient-to-br from-accent/50 to-accent/25 border border-accent/30" />
                 </div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl glass border border-border/50 p-4 shadow-xl">
-                  <div className="space-y-2">
-                    <div className="h-2 w-full bg-gradient-to-r from-primary/50 to-transparent rounded-full" />
-                    <div className="h-2 w-4/5 bg-gradient-to-r from-primary/50 to-transparent rounded-full" />
-                    <div className="h-2 w-3/5 bg-gradient-to-r from-primary/50 to-transparent rounded-full" />
+                <div className="absolute -bottom-6 -left-6 w-36 h-36 rounded-2xl glass border border-border p-5 shadow-xl">
+                  <div className="space-y-2.5">
+                    <div className="h-2.5 w-full bg-gradient-to-r from-primary/60 to-transparent rounded-full" />
+                    <div className="h-2.5 w-4/5 bg-gradient-to-r from-primary/50 to-transparent rounded-full" />
+                    <div className="h-2.5 w-3/5 bg-gradient-to-r from-primary/40 to-transparent rounded-full" />
+                    <div className="h-2.5 w-2/5 bg-gradient-to-r from-primary/30 to-transparent rounded-full" />
                   </div>
                 </div>
 
                 {/* Efecto de brillo */}
-                <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 blur-3xl opacity-60" />
+                <div className="absolute -z-10 inset-0 bg-gradient-to-br from-primary/25 via-transparent to-accent/25 blur-3xl opacity-70" />
               </div>
             </div>
           </div>

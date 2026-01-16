@@ -49,14 +49,14 @@ export function AboutERP() {
               </Button>
             </div>
 
-            <Card className="p-6 sm:p-8 lg:p-10 glass border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg shadow-primary/10">
+            <Card className="p-6 sm:p-8 lg:p-10 bg-card border border-primary/25 shadow-xl shadow-primary/10">
               <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-foreground">
                 ¿Por qué Intuitive ERP?
               </h3>
               <ul className="space-y-4 sm:space-y-5">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                     <span className="text-sm sm:text-base text-foreground leading-relaxed font-medium">{benefit}</span>
                   </li>
                 ))}

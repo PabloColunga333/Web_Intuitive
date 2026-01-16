@@ -33,10 +33,10 @@ export function ServicesPreview() {
               return (
                 <Card
                   key={service.id}
-                  className={`p-6 sm:p-8 flex flex-col relative overflow-hidden group transition-all hover:shadow-xl ${
+                  className={`p-6 sm:p-8 flex flex-col relative overflow-hidden group transition-all hover:-translate-y-1 ${
                     isHighlighted
-                      ? "glass border-primary/30 hover:border-primary/50"
-                      : "glass border-border/50 hover:border-primary/20"
+                      ? "bg-primary/5 border-primary/30 shadow-lg shadow-primary/10 hover:shadow-xl hover:shadow-primary/15 hover:border-primary/50"
+                      : "bg-card border-border shadow-sm hover:shadow-xl hover:border-primary/30"
                   }`}
                 >
                   {isHighlighted && (
