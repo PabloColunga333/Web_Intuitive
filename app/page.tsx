@@ -32,33 +32,54 @@ export default function HomePage() {
       <main>
         <Hero />
         
-        {/* Sección Carrusel de Clientes - Full Bleed Edge-to-Edge */}
-        <section className="section-alt py-10 sm:py-14">
+        {/* Separador visual premium después del hero */}
+        <div className="section-divider-accent my-0" />
+        
+        {/* Sección Carrusel de Clientes - Anclaje visual fuerte */}
+        <section className="section-highlight py-12 sm:py-16 lg:py-20">
+          <div className="container mx-auto px-4 mb-8 sm:mb-10">
+            <div className="text-center">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary mb-3">Empresas que confían en nosotros</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">+50 implementaciones exitosas en México</h2>
+            </div>
+          </div>
           {/* Wrapper Full-Bleed */}
           <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-x-clip">
-            <ClientsCarousel showInfo={false} />
+            <ClientsCarousel showInfo={false} showTitle={false} />
           </div>
         </section>
+
+        {/* Separador */}
+        <div className="section-divider" />
 
         <div className="section-base">
           <AboutERP />
         </div>
+        
+        {/* Separador */}
+        <div className="section-divider" />
         
         <div className="section-alt">
           <Features />
         </div>
         
         <div className="section-base">
-          <ExtendedCapabilities />
+          <ServicesPreview />
         </div>
         
+        {/* Separador antes de capacidades */}
+        <div className="section-divider" />
+        
         <div className="section-alt">
-          <ServicesPreview />
+          <ExtendedCapabilities />
         </div>
         
         <div className="section-base">
           <FAQ />
         </div>
+
+        {/* Separador antes de contacto */}
+        <div className="section-divider-accent my-8" />
 
         <section className="py-16 md:py-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />

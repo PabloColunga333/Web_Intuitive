@@ -58,7 +58,7 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
       const halfWidth = totalWidth / 2
 
       let scrollPosition = 0
-      const speed = 0.8
+      const speed = 0.5  // Velocidad más suave y lenta
 
       const animate = () => {
         scrollPosition += speed
@@ -94,12 +94,19 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
       )}
 
       <div className="relative overflow-x-clip w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        {/* Fade gradients más amplios y suaves - usando colores que combinan con section-highlight */}
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 lg:w-48 z-10 pointer-events-none" 
+          style={{ background: 'linear-gradient(to right, oklch(0.94 0.015 230) 0%, oklch(0.94 0.015 230 / 0.8) 40%, transparent 100%)' }}
+        />
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 lg:w-48 z-10 pointer-events-none" 
+          style={{ background: 'linear-gradient(to left, oklch(0.94 0.015 230) 0%, oklch(0.94 0.015 230 / 0.8) 40%, transparent 100%)' }}
+        />
 
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scroll-smooth pb-4 hide-scrollbar pl-6 sm:pl-8 lg:pl-10"
+          className="flex gap-5 sm:gap-7 lg:gap-10 overflow-x-auto scroll-smooth pb-4 hide-scrollbar px-8 sm:px-12 lg:px-16"
           style={{
             scrollBehavior: "auto",
             WebkitOverflowScrolling: "touch",
@@ -108,16 +115,16 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
           {clients.concat(clients).map((client, index) => (
             <div
               key={`${client.name}-${index}`}
-              className="flex-shrink-0 h-20 sm:h-24 px-8 sm:px-10 rounded-2xl bg-card border border-border shadow-sm flex items-center justify-center transition-all duration-500 cursor-default group hover:shadow-xl hover:border-primary/40 hover:-translate-y-1.5 hover:bg-card/95"
+              className="flex-shrink-0 h-16 sm:h-20 lg:h-24 px-6 sm:px-8 lg:px-10 rounded-xl bg-white/80 border border-border/40 shadow-sm flex items-center justify-center transition-all duration-700 cursor-default group hover:shadow-lg hover:border-primary/30 hover:bg-white"
               aria-label={`Cliente: ${client.name}`}
             >
               <div className="relative w-full h-full flex items-center justify-center">
                 <Image
                   src={client.logo}
                   alt={`Logo de ${client.name}`}
-                  width={140}
-                  height={70}
-                  className="h-14 sm:h-16 w-auto object-contain grayscale opacity-55 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                  width={120}
+                  height={60}
+                  className="h-10 sm:h-12 lg:h-14 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
                   onError={(e) => {
                     const img = e.currentTarget as HTMLImageElement
                     img.style.display = "none"
