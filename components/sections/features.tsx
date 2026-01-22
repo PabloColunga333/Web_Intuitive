@@ -107,7 +107,7 @@ export function Features() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
 
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4">
               Características principales
@@ -118,7 +118,7 @@ export function Features() {
           </div>
 
           {/* Carrusel */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-5">
             {/* Botón Anterior */}
             <button
               onClick={prevSlide}
