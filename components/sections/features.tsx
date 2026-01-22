@@ -129,11 +129,11 @@ export function Features() {
             </button>
 
             {/* Tarjetas del Carrusel */}
-            <div className="overflow-hidden w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1080px] 2xl:max-w-[1440px]">
+            <div className="overflow-hidden">
               <div
                 ref={cardRef}
                 key={`${currentIndex}-${visibleCards}-${direction}`}
-                className={`features-grid gap-4 sm:gap-6 transform-gpu ${
+                className={`flex justify-center gap-4 sm:gap-6 transform-gpu ${
                   direction === "right" ? "animate-carousel-right" : "animate-carousel-left"
                 }`}
               >
@@ -146,7 +146,7 @@ export function Features() {
                       key={feature.id}
                       data-card
                       style={maxHeight ? { height: `${maxHeight}px` } : {}}
-                      className="bg-card border border-border shadow-sm group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer active:scale-[0.98] flex flex-col rounded-xl overflow-hidden !p-0 !gap-0"
+                      className="w-[280px] sm:w-[300px] lg:w-[320px] flex-shrink-0 bg-card border border-border shadow-sm group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer active:scale-[0.98] flex flex-col rounded-xl overflow-hidden !p-0 !gap-0"
                       onClick={() => setSelectedFeature(feature)}
                     >
                       {/* Imagen de la característica */}
