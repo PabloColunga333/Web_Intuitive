@@ -129,11 +129,11 @@ export function Features() {
             </button>
 
             {/* Tarjetas del Carrusel */}
-            <div className="overflow-hidden">
+            <div className="overflow-hidden w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1080px] 2xl:max-w-[1440px]">
               <div
                 ref={cardRef}
                 key={`${currentIndex}-${visibleCards}-${direction}`}
-                className={`features-grid mx-auto max-w-[1120px] justify-center gap-4 sm:gap-6 transform-gpu ${
+                className={`features-grid gap-4 sm:gap-6 transform-gpu ${
                   direction === "right" ? "animate-carousel-right" : "animate-carousel-left"
                 }`}
               >
