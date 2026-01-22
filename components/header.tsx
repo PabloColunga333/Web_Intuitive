@@ -12,8 +12,10 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 60)
     }
+
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -31,11 +33,16 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full overflow-hidden transition-[opacity,transform,max-height,background-color,backdrop-filter,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-xl shadow-lg shadow-foreground/5 border-b border-border" 
-          : "bg-background/80 backdrop-blur-md"
+          ? "bg-background/95 backdrop-blur-xl shadow-lg shadow-foreground/5 border-b border-border max-h-24"
+          : "bg-transparent backdrop-blur-none shadow-none border-b border-transparent max-h-0"
+      } ${
+        isScrolled
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-6 pointer-events-none"
       }`}
+      aria-hidden={!isScrolled}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 lg:h-18 items-center justify-between">

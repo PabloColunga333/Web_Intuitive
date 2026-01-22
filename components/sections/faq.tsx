@@ -8,10 +8,10 @@ export function FAQ() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent("Hola, tengo una pregunta sobre Intuitive ERP.")}`
 
   return (
-    <section className="relative" id="faq">
+    <section className="py-4 sm:py-5 lg:py-6 relative" id="faq">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 sm:mb-14">
+          <div className="text-center mb-4 sm:mb-5">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Preguntas frecuentes</h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Respuestas a las dudas más comunes sobre Intuitive ERP

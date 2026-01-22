@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import Image from "next/image"
 import { features } from "@/lib/site-data"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -15,6 +16,16 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   "trending-up": TrendingUp,
   users: Users,
   "file-text": FileText,
+}
+
+const featureImages: Record<string, string> = {
+  planificacion: "/features/planificacion.jpg",
+  ingenieria: "/features/ingenieria.jpg",
+  manufactura: "/features/manufactura.jpg",
+  inventario: "/features/inventario.jpg",
+  prevision: "/features/prevision.jpg",
+  crm: "/features/crm.jpg",
+  cotizaciones: "/features/cotizaciones.jpg",
 }
 
 const featureBullets: Record<string, string[]> = {
@@ -47,7 +58,7 @@ export function Features() {
   // Para móvil: 1 tarjeta, tablet: 2, desktop: 3
   const getVisibleCards = () => {
     if (typeof window === "undefined") return 3
-    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 640) return 1
     if (window.innerWidth < 1024) return 2
     return 3
   }
@@ -92,7 +103,7 @@ export function Features() {
   }, [visibleCards, currentIndex])
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 relative" id="caracteristicas">
+    <section className="py-4 sm:py-5 lg:py-6 relative" id="caracteristicas">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
 
       <div className="container mx-auto px-4">
@@ -135,18 +146,24 @@ export function Features() {
                       key={feature.id}
                       data-card
                       style={maxHeight ? { height: `${maxHeight}px` } : {}}
-                      className="p-5 sm:p-6 bg-card border border-border shadow-sm group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer active:scale-[0.98] flex flex-col"
+                      className="bg-card border border-border shadow-sm group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer active:scale-[0.98] flex flex-col rounded-xl overflow-hidden !p-0 !gap-0"
                       onClick={() => setSelectedFeature(feature)}
                     >
-                      <div className="flex items-center justify-center mb-4 sm:mb-5">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
-                        </div>
+                      {/* Imagen de la característica */}
+                      <div className="relative w-full h-48 sm:h-52 lg:h-56 flex-shrink-0 overflow-hidden bg-card">
+                        <Image
+                          src={featureImages[feature.id] || "/placeholder.svg"}
+                          alt={feature.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
                       </div>
 
-                      <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                        {feature.title}
-                      </h3>
+                      <div className="p-6 sm:p-7 lg:p-8 flex flex-col flex-grow">
+                        <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                          {feature.title}
+                        </h3>
 
                       <ul className="space-y-2 mb-4 flex-grow">
                         {bullets.map((bullet, idx) => (
@@ -165,6 +182,7 @@ export function Features() {
                         Ver detalle
                         <ChevronRight className="w-4 h-4 ml-1" />
                       </Button>
+                      </div>
                     </Card>
                   )
                 })}

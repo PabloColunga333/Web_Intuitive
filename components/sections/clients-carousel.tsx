@@ -81,7 +81,7 @@ export function ClientsCarousel({ title = "Empresas que confían en nosotros", a
   }, [prefersReducedMotion])
 
   return (
-    <div className="relative">
+    <div className="relative bg-background -mt-2 pt-10 pb-10 sm:pt-12 sm:pb-12 rounded-t-[3rem]">
       {showTitle && (
         <div className="container mx-auto px-4 mb-12 sm:mb-16">
           <div className="max-w-5xl mx-auto text-center">

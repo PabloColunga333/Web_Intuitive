@@ -8,113 +8,105 @@ export function Hero() {
   const whatsappLink = `https://wa.me/${siteConfig.contact.whatsapp.number}?text=${encodeURIComponent(siteConfig.contact.whatsapp.message)}`
 
   return (
-    <section className="relative min-h-[92vh] md:min-h-[95vh] flex items-center overflow-hidden">
-      {/* Imagen de fondo - piso de planta */}
-      <div className="absolute inset-0 -z-20">
+    <section className="relative h-[110vh] flex items-center justify-center overflow-hidden">
+      {/* ===== BACKGROUND LAYER: Imagen adjunta ===== */}
+      <div className="absolute inset-0 -z-30">
         <Image
-          src="/hero/plant-floor.jpg.png"
-          alt="Piso de planta de manufactura industrial"
+          src="/hero/hero-factory-bg.png"
+          alt="Planta de manufactura industrial con trabajadores"
           fill
           priority
-          quality={90}
-          className="object-cover object-center lg:object-right brightness-[0.6] contrast-[1.1]"
+          className="object-cover object-center"
           sizes="100vw"
         />
       </div>
 
-      {/* Overlay oscuro global para mejor contraste */}
-      <div className="absolute inset-0 bg-black/40 -z-10" />
-
-      {/* Overlay gradiente izquierda muy fuerte para legibilidad del texto */}
+      {/* ===== OVERLAY LAYER 1: Radial gradient centrado (dark center) ===== */}
       <div 
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-20"
         style={{
-          background: `linear-gradient(
-            100deg,
-            hsl(var(--background)) 0%,
-            hsl(var(--background) / 0.98) 25%,
-            hsl(var(--background) / 0.92) 40%,
-            hsl(var(--background) / 0.70) 55%,
-            hsl(var(--background) / 0.35) 70%,
-            transparent 85%
+          background: `radial-gradient(circle at center,
+            rgba(0,0,0,0.80) 0%,
+            rgba(0,0,0,0.65) 30%,
+            rgba(0,0,0,0.40) 55%,
+            rgba(0,0,0,0.50) 100%
           )`
         }}
       />
 
-      {/* Overlay gradiente inferior para transición suave al siguiente contenido */}
+      {/* ===== OVERLAY LAYER 2: Vertical scrim (top/bottom) ===== */}
       <div 
-        className="absolute inset-x-0 bottom-0 h-32 -z-10"
+        className="absolute inset-0 -z-10"
         style={{
-          background: `linear-gradient(to top, hsl(var(--background)) 0%, transparent 100%)`
+          background: `linear-gradient(to bottom,
+            rgba(0,0,0,0.60) 0%,
+            rgba(0,0,0,0.10) 30%,
+            rgba(0,0,0,0.10) 70%,
+            rgba(0,0,0,0.65) 100%
+          )`
         }}
       />
 
-      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Layout grid: texto a la izquierda, espacio para imagen a la derecha */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Contenido principal - lado izquierdo con fondo garantizado */}
-            <div className="relative">
-              {/* Panel de fondo para garantizar legibilidad */}
-              <div className="absolute -inset-6 sm:-inset-8 lg:-inset-10 bg-background/85 backdrop-blur-sm rounded-3xl -z-10" />
-              
-              <div className="space-y-6 sm:space-y-8">
-                <div className="flex justify-start animate-fade-up">
-                  <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-primary/10 border border-primary/25 text-sm font-semibold text-primary shadow-sm">
-                    <span>Software integrado de manufactura ERP/MRP</span>
-                  </div>
-                </div>
+      {/* ===== OVERLAY LAYER 3: Vignette suave en bordes ===== */}
+      <div 
+        className="absolute inset-0 -z-10 pointer-events-none"
+        style={{
+          boxShadow: `inset 0 0 200px 60px rgba(0,0,0,0.4)`
+        }}
+      />
 
-                <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-balance animate-fade-up animation-delay-100 leading-[1.1] text-foreground">
-                  Planeación y control de producción{" "}
-                  <span className="text-primary">
-                    en tiempo real
-                  </span>
-                </h1>
+      {/* ===== CONTENT LAYER ===== */}
+      <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-24 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          
+          {/* H1 grande, centrado */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-up animation-delay-100 leading-[1.1] tracking-tight">
+            Control total de tu{" "}
+            <span className="text-primary">
+              producción
+            </span>
+          </h1>
 
-                <p className="text-lg sm:text-xl text-foreground/80 text-pretty leading-relaxed animate-fade-up animation-delay-200 max-w-xl">
-                  CRM, trazabilidad, calidad e ingeniería integrados. Arquitectura basada en Microsoft para visibilidad
-                  completa de tu operación.
-                </p>
+          {/* Subheadline con opacidad */}
+          <p className="text-lg sm:text-xl md:text-2xl text-white/70 mb-10 max-w-2xl mx-auto animate-fade-up animation-delay-200 leading-relaxed">
+            Planeación, trazabilidad, calidad e ingeniería integrados en una sola plataforma. 
+            Visibilidad completa de tu operación en tiempo real.
+          </p>
 
-                {/* CTAs */}
-                <div className="flex flex-wrap items-center gap-4 pt-2 animate-fade-up animation-delay-300">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="text-base h-14 px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg glow-primary"
-                  >
-                    <Link href="/servicios">
-                      Ver servicios
-                      <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="text-base h-14 px-8 font-semibold text-white bg-[linear-gradient(120deg,#2fe075,#22c35e)] border-[#1fa755] shadow-lg shadow-[#25D366]/35 hover:shadow-[#25D366]/50 hover:-translate-y-[1px] transition-all"
-                  >
-                    <a 
-                      href={whatsappLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="flex items-center gap-2"
-                      aria-label="Iniciar conversación por WhatsApp"
-                    >
-                      <MessageCircle className="w-5 h-5" aria-hidden="true" />
-                      <span>Hablar por WhatsApp</span>
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-
-            {/* Lado derecho - espacio visual para la imagen de fondo */}
-            <div className="hidden lg:block" aria-hidden="true" />
+          {/* CTAs centrados */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-300">
+            <Button
+              asChild
+              size="lg"
+              className="text-base h-14 px-8 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5 transition-all w-full sm:w-auto"
+            >
+              <Link href="/contacto?tipo=demo">
+                Solicitar demo
+                <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-base h-14 px-8 font-semibold bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all w-full sm:w-auto"
+            >
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Iniciar conversación por WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
+                Hablar por WhatsApp
+              </a>
+            </Button>
           </div>
+
         </div>
       </div>
+
+      {/* Sin gradiente - la siguiente sección se superpone */}
     </section>
   )
 }

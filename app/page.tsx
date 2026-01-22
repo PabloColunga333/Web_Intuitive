@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="section-divider-accent my-0" />
         
         {/* Sección Carrusel de Clientes - Anclaje visual fuerte */}
-        <section className="section-highlight py-12 sm:py-16 lg:py-20">
+        <section className="section-highlight py-3 sm:py-4 lg:py-5">
           <div className="container mx-auto px-4 mb-8 sm:mb-10">
             <div className="text-center">
               <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary mb-3">Empresas que confían en nosotros</span>
@@ -81,7 +81,7 @@ export default function HomePage() {
         {/* Separador antes de contacto */}
         <div className="section-divider-accent my-8" />
 
-        <section className="py-16 md:py-20 relative">
+        <section className="py-4 md:py-5 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10" />
 
           <div className="container mx-auto px-4">
