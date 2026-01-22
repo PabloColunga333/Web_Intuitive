@@ -118,7 +118,7 @@ export function Features() {
           </div>
 
           {/* Carrusel */}
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
             {/* Botón Anterior */}
             <button
               onClick={prevSlide}
@@ -129,7 +129,7 @@ export function Features() {
             </button>
 
             {/* Tarjetas del Carrusel */}
-            <div className="flex-1 overflow-hidden">
+            <div className="overflow-hidden">
               <div
                 ref={cardRef}
                 key={`${currentIndex}-${visibleCards}-${direction}`}
