@@ -30,7 +30,7 @@ export function Header() {
   const navigation = [
     { name: "Inicio", href: "/" },
     { name: "Servicios", href: "/servicios" },
-    { name: "Inteligencia Predictiva", href: "/predictivo" },
+    { name: "IA predictiva", href: "/predictivo" },
     { name: "Nosotros", href: "/nosotros" },
     { name: "Soporte", href: "/soporte-tecnico" },
     { name: "Blog", href: "/blog" },
