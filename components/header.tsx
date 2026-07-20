@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, MessageCircle, ArrowRight } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
@@ -9,8 +10,11 @@ import { siteConfig } from "@/lib/site-data"
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === "/"
 
   useEffect(() => {
+    if (!isHome) return
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 60)
     }
@@ -18,7 +22,10 @@ export function Header() {
     handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [isHome])
+
+  // En páginas distintas al inicio, el header siempre es visible
+  const visible = isHome ? isScrolled : true
 
   const navigation = [
     { name: "Inicio", href: "/" },
@@ -35,15 +42,15 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full overflow-hidden transition-[opacity,transform,max-height,background-color,backdrop-filter,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-        isScrolled 
+        visible
           ? "bg-background/95 backdrop-blur-xl shadow-lg shadow-foreground/5 border-b border-border max-h-24"
           : "bg-transparent backdrop-blur-none shadow-none border-b border-transparent max-h-0"
       } ${
-        isScrolled
+        visible
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 -translate-y-6 pointer-events-none"
       }`}
-      aria-hidden={!isScrolled}
+      aria-hidden={!visible}
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 lg:h-18 items-center justify-between">
