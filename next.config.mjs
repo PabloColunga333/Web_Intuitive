@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // En desarrollo, Next no permite middleware con output export.
+  // Dejamos export solo para build de producción/estático.
+  output: process.env.NODE_ENV === "production" ? "export" : undefined,
   trailingSlash: true,
   images: {
     unoptimized: true,
