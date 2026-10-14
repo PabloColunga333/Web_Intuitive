@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Facebook, Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react"
 import { siteConfig } from "@/lib/site-data"
 
@@ -27,11 +28,14 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="font-semibold text-lg">
-                <span className="text-primary">Intuitive</span>
-                <span className="text-foreground ml-1">ERP</span>
-              </div>
+            <Link href="/" className="inline-flex items-center mb-4" aria-label="Ir al inicio de Intuitive Systems México">
+              <Image
+                src="/logos/intuitive-systems-mexico.png"
+                alt="Intuitive Systems México"
+                width={525}
+                height={177}
+                className="h-10 sm:h-11 w-auto"
+              />
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 sm:mb-6">
               Software integrado de manufactura ERP/MRP. Planeación y control en tiempo real.
