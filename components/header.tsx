@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -54,12 +55,15 @@ export function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 lg:h-18 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            
-            <div className="font-semibold text-lg lg:text-xl">
-              <span className="text-primary">Intuitive</span>
-              <span className="text-foreground ml-1">ERP</span>
-            </div>
+          <Link href="/" className="flex items-center group" aria-label="Ir al inicio de Intuitive Systems México">
+            <Image
+              src="/logos/intuitive-systems-mexico.png"
+              alt="Intuitive Systems México"
+              width={525}
+              height={177}
+              priority
+              className="h-9 sm:h-10 lg:h-11 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
