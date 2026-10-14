@@ -55,17 +55,15 @@ export function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-16 lg:h-18 items-center justify-between">
-          <Link href="/" className="flex items-center group" aria-label="Ir al inicio de Intuitive Systems México">
-            <span className="relative block h-8 w-[170px] overflow-hidden xl:h-10 xl:w-[213px]">
-              <Image
-                src="/logos/intuitive-systems-mexico.png"
-                alt=""
-                width={525}
-                height={177}
-                priority
-                className="absolute -left-[12px] -top-[17px] h-[66px] w-[195px] max-w-none mix-blend-multiply xl:-left-[15px] xl:-top-[21px] xl:h-[82px] xl:w-[244px]"
-              />
-            </span>
+          <Link href="/" className="flex items-center group shrink-0" aria-label="Ir al inicio de Intuitive Systems México">
+            <Image
+              src="/logos/intuitive-systems-mexico-logo.png"
+              alt="Intuitive Systems México"
+              width={461}
+              height={90}
+              priority
+              className="h-9 w-auto object-contain sm:h-10 lg:h-10 xl:h-11"
+            />
           </Link>
 
           {/* Desktop Navigation */}

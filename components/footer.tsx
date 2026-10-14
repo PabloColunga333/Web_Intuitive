@@ -29,15 +29,13 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center mb-4" aria-label="Ir al inicio de Intuitive Systems México">
-              <span className="relative block h-12 w-[250px] overflow-hidden">
-                <Image
-                  src="/logos/intuitive-systems-mexico.png"
-                  alt=""
-                  width={525}
-                  height={177}
-                  className="absolute -left-[15px] -top-[21px] h-[82px] w-[244px] max-w-none mix-blend-multiply"
-                />
-              </span>
+              <Image
+                src="/logos/intuitive-systems-mexico-logo.png"
+                alt="Intuitive Systems México"
+                width={461}
+                height={90}
+                className="h-12 w-auto object-contain sm:h-14"
+              />
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-5 sm:mb-6">
               Software integrado de manufactura ERP/MRP. Planeación y control en tiempo real.
