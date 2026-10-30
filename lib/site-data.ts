@@ -12,7 +12,7 @@ export const siteConfig = {
     emailDestination: "pablocolunga@live.com", // Email real para envío de formularios
     location: "Querétaro, Qro.",
     whatsapp: {
-      number: "5214271982038",
+      number: "5214425613737",
       message: "Hola, me gustaría recibir información sobre Intuitive ERP.",
     },
   },
